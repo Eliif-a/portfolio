@@ -21,6 +21,24 @@
 <meta charset="utf-8">
 <title>Lara Elif Arduç – Architektin M.A. | Portfolio</title>
 <meta name="description" content="Lara Elif Arduç, Architektin M.A. Portfolio mit ausgewählten Arbeiten 2023–2026: Umnutzung von Bestand, Städtebau, Wohnen und Innenraum.">
+<script>
+/* Hell am Tag, dunkel ab Sonnenuntergang bis Sonnenaufgang (Ortszeit des Besuchers, Sonnenstand fuer Mitteleuropa) */
+(function(){
+  function dark(now){
+    var lat=51*Math.PI/180, lon=10;
+    var start=Date.UTC(now.getUTCFullYear(),0,1), n=Math.floor((now-start)/864e5)+1, g=2*Math.PI/365*(n-1);
+    var eq=229.18*(0.000075+0.001868*Math.cos(g)-0.032077*Math.sin(g)-0.014615*Math.cos(2*g)-0.040849*Math.sin(2*g));
+    var d=0.006918-0.399912*Math.cos(g)+0.070257*Math.sin(g)-0.006758*Math.cos(2*g)+0.000907*Math.sin(2*g)-0.002697*Math.cos(3*g)+0.00148*Math.sin(3*g);
+    var c=Math.cos(90.833*Math.PI/180)/(Math.cos(lat)*Math.cos(d))-Math.tan(lat)*Math.tan(d);
+    var ha=Math.acos(Math.max(-1,Math.min(1,c)))*180/Math.PI;
+    var rise=720-4*(lon+ha)-eq, set=720-4*(lon-ha)-eq;
+    var m=now.getUTCHours()*60+now.getUTCMinutes();
+    return m<rise||m>=set;
+  }
+  function apply(){document.documentElement.setAttribute('data-theme',dark(new Date())?'dark':'light')}
+  apply();setInterval(apply,300000);
+})();
+</script>
 <style>
 @font-face{font-family:"Inter Tight";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/inter-tight-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:"Inter Tight";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/inter-tight-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
@@ -274,7 +292,7 @@ div.box{cursor:default}
       <li><a href="#am-rand-der-zeit"><span class="label">(01)</span><span class="th"><img src="img/r-axo.jpg" alt=""></span><span class="cap">Am Rand der Zeit.<br>Masterthesis</span></a></li>
       <li><a href="#agri-culture"><span class="label">(02)</span><span class="th"><img src="img/a-skizze.jpg" alt=""></span><span class="cap">Agri+Culture.<br>Städtebau</span></a></li>
       <li><a href="#stadtkind"><span class="label">(03)</span><span class="th"><img src="img/s-hero.jpg" alt=""></span><span class="cap">Stadtkind.<br>Freiluftschule</span></a></li>
-      <li><a href="#boett-block"><span class="label">(04)</span><span class="th"><img src="img/b-v-laubengang.jpg" alt=""></span><span class="cap">Bött Block Care.<br>Wohnen</span></a></li>
+      <li><a href="#boett-block"><span class="label">(04)</span><span class="th"><img src="img/b-v-laubengang.jpg" alt=""></span><span class="cap">Bött Care* Block.<br>Wohnen</span></a></li>
       <li><a href="#light-shell"><span class="label">(05)</span><span class="th"><img src="img/h-d5.jpg" alt=""></span><span class="cap">Light Shell.<br>Tanzhaus</span></a></li>
       <li><a href="#wolke-7"><span class="label">(06)</span><span class="th"><img src="img/w-tg.jpg" alt=""></span><span class="cap">Wolke 7.<br>Bachelorthesis</span></a></li>
       <li><a href="#koenigs-grill"><span class="label">(07)</span><span class="th"><img src="img/k-illu.jpg" alt=""></span><span class="cap">Königs Grill 2.<br>Innenraum &amp; Marketing</span></a></li>
@@ -303,7 +321,7 @@ div.box{cursor:default}
       <a class="card lead" href="#am-rand-der-zeit"><div class="frame"><img src="img/r-axo.jpg" alt="Axonometrie Park, Halle und Pavillon" loading="lazy"></div><div class="meta"><span class="label">01°</span><span class="label muted">Masterthesis · 2026</span></div><h2>Am Rand der Zeit.</h2><p>Umerzählen einer Tankstelle</p></a>
       <a class="card" href="#agri-culture"><div class="frame"><img src="img/a-skizze.jpg" alt="Skizze Wohnen über dem Verkehr" loading="lazy"></div><div class="meta"><span class="label">02°</span><span class="label muted">2024</span></div><h2>Agri+Culture.</h2><p>Stadtlandschaft über dem Autobahnkreuz</p></a>
       <a class="card" href="#stadtkind"><div class="frame"><img src="img/s-hero.jpg" alt="Lernflur der Freiluftschule" loading="lazy"></div><div class="meta"><span class="label">03°</span><span class="label muted">2024</span></div><h2>Stadtkind.</h2><p>Freiluftschule in einer ehemaligen Markthalle</p></a>
-      <a class="card" href="#boett-block"><div class="frame"><img src="img/b-v-laubengang.jpg" alt="Grüner Laubengang" loading="lazy"></div><div class="meta"><span class="label">04°</span><span class="label muted">M.A.</span></div><h2>Bött Block Care.</h2><p>Wohnen über Generationen</p></a>
+      <a class="card" href="#boett-block"><div class="frame"><img src="img/b-v-laubengang.jpg" alt="Grüner Laubengang" loading="lazy"></div><div class="meta"><span class="label">04°</span><span class="label muted">M.A.</span></div><h2>Bött Care* Block.</h2><p>Wohnen über Generationen</p></a>
       <a class="card" href="#light-shell"><div class="frame"><img src="img/h-d5.jpg" alt="Detail Fassade" loading="lazy"></div><div class="meta"><span class="label">05°</span><span class="label muted">B.A.</span></div><h2>Historical Light Shell.</h2><p>Tanzhaus in einem Bunker</p></a>
       <a class="card" href="#wolke-7"><div class="frame"><img src="img/w-tg.jpg" alt="Fahrradstation in der Tiefgarage" loading="lazy"></div><div class="meta"><span class="label">06°</span><span class="label muted">Bachelorthesis · 22/23</span></div><h2>Wolke 7.</h2><p>Umnutzung einer Tiefgarage</p></a>
       <a class="card" href="#koenigs-grill"><div class="frame"><img src="img/k-illu.jpg" alt="Illustration: Hand mit Döner" loading="lazy"></div><div class="meta"><span class="label">07°</span><span class="label muted">seit 2024</span></div><h2>Königs Grill 2.</h2><p>Innenraum und Marketing für einen Imbiss</p></a>
@@ -511,7 +529,7 @@ div.box{cursor:default}
         <figure><div class="box free" data-cap="Westansicht"><img src="img/s-west.jpg" alt="Westansicht" loading="lazy"></div><figcaption><b>Westansicht</b></figcaption></figure>
       </div>
     </div>
-    <nav class="pager" aria-label="Projekte blättern"><a href="#agri-culture"><span class="label muted">← Voriges Projekt</span><strong>Agri+Culture.</strong></a><a href="#boett-block"><span class="label muted">Nächstes Projekt →</span><strong>Bött Block Care.</strong></a></nav>
+    <nav class="pager" aria-label="Projekte blättern"><a href="#agri-culture"><span class="label muted">← Voriges Projekt</span><strong>Agri+Culture.</strong></a><a href="#boett-block"><span class="label muted">Nächstes Projekt →</span><strong>Bött Care* Block.</strong></a></nav>
   </div>
 </section>
 
@@ -520,7 +538,7 @@ div.box{cursor:default}
   <div class="wrap">
     <header class="phead">
       <div><p class="num">04<sup>°</sup></p><p class="label mark" style="margin-top:21px">Work 04 / 07</p></div>
-      <div><h1>Bött Block Care.</h1><p class="sub">Wie Generationen wohnen</p></div>
+      <div><h1>Bött Care* Block.</h1><p class="sub">Wie Generationen wohnen</p></div>
     </header>
     <div class="gold rev">
       <div>
@@ -602,7 +620,7 @@ div.box{cursor:default}
         <figure><div class="box free" data-cap="Ansicht · mit Eingang"><img src="img/h-ansicht.jpg" alt="Ansicht" loading="lazy"></div><figcaption><b>Ansicht</b> mit Eingang</figcaption></figure>
       </div>
     </div>
-    <nav class="pager" aria-label="Projekte blättern"><a href="#boett-block"><span class="label muted">← Voriges Projekt</span><strong>Bött Block Care.</strong></a><a href="#wolke-7"><span class="label muted">Nächstes Projekt →</span><strong>Wolke 7.</strong></a></nav>
+    <nav class="pager" aria-label="Projekte blättern"><a href="#boett-block"><span class="label muted">← Voriges Projekt</span><strong>Bött Care* Block.</strong></a><a href="#wolke-7"><span class="label muted">Nächstes Projekt →</span><strong>Wolke 7.</strong></a></nav>
   </div>
 </section>
 
