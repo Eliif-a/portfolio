@@ -22,22 +22,8 @@
 <title>Lara Elif Arduç – Architektin M.A. | Portfolio</title>
 <meta name="description" content="Lara Elif Arduç, Architektin M.A. Portfolio mit ausgewählten Arbeiten 2023–2026: Umnutzung von Bestand, Städtebau, Wohnen und Innenraum.">
 <script>
-/* Hell am Tag, dunkel ab Sonnenuntergang bis Sonnenaufgang (Ortszeit des Besuchers, Sonnenstand fuer Mitteleuropa) */
-(function(){
-  function dark(now){
-    var lat=51*Math.PI/180, lon=10;
-    var start=Date.UTC(now.getUTCFullYear(),0,1), n=Math.floor((now-start)/864e5)+1, g=2*Math.PI/365*(n-1);
-    var eq=229.18*(0.000075+0.001868*Math.cos(g)-0.032077*Math.sin(g)-0.014615*Math.cos(2*g)-0.040849*Math.sin(2*g));
-    var d=0.006918-0.399912*Math.cos(g)+0.070257*Math.sin(g)-0.006758*Math.cos(2*g)+0.000907*Math.sin(2*g)-0.002697*Math.cos(3*g)+0.00148*Math.sin(3*g);
-    var c=Math.cos(90.833*Math.PI/180)/(Math.cos(lat)*Math.cos(d))-Math.tan(lat)*Math.tan(d);
-    var ha=Math.acos(Math.max(-1,Math.min(1,c)))*180/Math.PI;
-    var rise=720-4*(lon+ha)-eq, set=720-4*(lon-ha)-eq;
-    var m=now.getUTCHours()*60+now.getUTCMinutes();
-    return m<rise||m>=set;
-  }
-  function apply(){document.documentElement.setAttribute('data-theme',dark(new Date())?'dark':'light')}
-  apply();setInterval(apply,300000);
-})();
+/* Immer hell (weißer Hintergrund), unabhängig von Uhrzeit und Dunkelmodus des Besuchers */
+document.documentElement.setAttribute('data-theme','light');
 </script>
 <style>
 @font-face{font-family:"Inter Tight";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/inter-tight-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
