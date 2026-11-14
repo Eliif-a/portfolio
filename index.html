@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://lara-elif-arduc.de/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="author" content="Lara Elif Arduç">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lara-elif-arduc.de/">
+<meta property="og:title" content="Lara Elif Arduç – Architektin M.A.">
+<meta property="og:description" content="Portfolio, ausgewählte Arbeiten 2023–2026">
+<meta property="og:image" content="https://lara-elif-arduc.de/img/r-hero.jpg">
+<meta property="og:locale" content="de_DE">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Lara Elif Arduç","alternateName":"Lara Elif Arduc","jobTitle":"Architektin M.A.","url":"https://lara-elif-arduc.de/","image":"https://lara-elif-arduc.de/img/portrait.jpg","email":"mailto:lara.arduc@web.de","alumniOf":{"@type":"CollegeOrUniversity","name":"MSA Münster School of Architecture"},"sameAs":["https://www.instagram.com/studio.arduc/"]}
+</script>
+<meta charset="utf-8">
+<title>Lara Elif Arduç – Architektin M.A. | Portfolio</title>
+<meta name="description" content="Lara Elif Arduç, Architektin M.A. Portfolio mit ausgewählten Arbeiten 2023–2026: Umnutzung von Bestand, Städtebau, Wohnen und Innenraum.">
+<style>
+@font-face{font-family:"Inter Tight";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/inter-tight-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Inter Tight";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/inter-tight-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* Layout: golden ratio throughout. Splits are 1 : 1.618, plates are golden rectangles, spacing follows Fibonacci (8 13 21 34 55 89). */
+:root{
+  --paper:#ffffff;
+  --sheet:#ffffff;
+  --ink:#161616;
+  --ink-2:#6a6965;
+  --rule:#dcdcd8;
+  --on-ink:#ffffff;
+  --font:"Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --phi:1.618;
+  --s1:8px; --s2:13px; --s3:21px; --s4:34px; --s5:55px; --s6:89px;
+  --t-xs:0.72rem; --t-s:0.9rem; --t-m:1rem; --t-l:1.15rem; --t-xl:1.5rem; --t-xxl:clamp(2.6rem,7.5vw,6.2rem);
+  --maxw:1320px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#141416;--sheet:#ecebe6;--ink:#ecebe7;--ink-2:#9d9b95;--rule:#323236;--on-ink:#141416;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#141416;--sheet:#ecebe6;--ink:#ecebe7;--ink-2:#9d9b95;--rule:#323236;--on-ink:#141416;color-scheme:dark}
+
+*{box-sizing:border-box}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--font);font-size:var(--t-m);line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--rule)}
+a:hover{text-decoration-color:var(--ink)}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:700px){.wrap{padding-left:max(var(--s5),env(safe-area-inset-left,0px));padding-right:max(var(--s5),env(safe-area-inset-right,0px))}}
+.label{font-size:var(--t-xs);letter-spacing:.05em;text-transform:uppercase;color:var(--ink)}
+.label.muted{color:var(--ink-2)}
+.mark::before{content:"";display:block;width:var(--s4);height:1px;background:currentColor;margin-bottom:var(--s2)}
+h1,h2,h3{font-weight:400;letter-spacing:-.035em;text-transform:uppercase;text-wrap:balance;margin:0;line-height:.95}
+p{margin:0}
+
+/* header tabs */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:var(--s2) var(--s4);padding-block:var(--s3);flex-wrap:wrap}
+.brand{font-size:var(--t-xs);letter-spacing:.05em;text-transform:uppercase;text-decoration:none;font-weight:500}
+.tabs{display:flex;flex-wrap:wrap;gap:var(--s1) var(--s3)}
+.tabs a{font-size:var(--t-xs);letter-spacing:.05em;text-transform:uppercase;text-decoration:none;color:var(--ink-2);padding-bottom:3px;border-bottom:1px solid transparent}
+.tabs a:hover{color:var(--ink)}
+.tabs a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--ink)}
+
+/* views */
+.view{padding-block:calc(var(--s6) * 1.618)}
+.view:focus{outline:none}
+
+/* golden splits */
+.gold{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.618fr);gap:var(--s5);align-items:start}
+.gold.rev{grid-template-columns:minmax(0,1.618fr) minmax(0,1fr)}
+.gold > *{min-width:0}
+@media (max-width:860px){.gold,.gold.rev{grid-template-columns:1fr;gap:var(--s4)}}
+
+/* plates: golden rectangles, symmetric rows */
+.rows{display:grid;gap:var(--s6);margin-top:calc(var(--s6) * 1.618)}
+.row{display:grid;gap:var(--s4);align-items:start}
+.row.pair{grid-template-columns:repeat(2,minmax(0,1fr))}
+.row.trio{grid-template-columns:repeat(3,minmax(0,1fr))}
+.row.quad{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:760px){.row.pair,.row.trio{grid-template-columns:1fr}.row.quad{grid-template-columns:repeat(2,minmax(0,1fr))}}
+figure{margin:0;min-width:0}
+.box{all:unset;display:block;width:100%;aspect-ratio:1.618/1;background:var(--sheet);cursor:zoom-in;box-sizing:border-box}
+.box.tall{aspect-ratio:1/1.618}
+.box.free{aspect-ratio:auto}
+.box:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.box img{display:block;width:100%;height:100%;object-fit:contain}
+.box.free img{height:auto}
+.box.cover img{object-fit:cover}
+figcaption{display:flex;flex-wrap:wrap;gap:4px var(--s2);align-items:baseline;margin-top:var(--s2);font-size:var(--t-s);color:var(--ink-2)}
+figcaption b{font-weight:400;font-size:var(--t-xs);color:var(--ink);text-transform:uppercase;letter-spacing:.05em}
+figcaption .scale{font-size:var(--t-xs);margin-left:auto;white-space:nowrap}
+
+/* start view */
+.intro-name h1{font-size:var(--t-xxl)}
+.intro-name h1 sup{font-size:.28em;font-weight:300;vertical-align:top;margin-left:.1em;letter-spacing:0}
+.intro-text{display:grid;gap:var(--s3);align-content:end;height:100%}
+.intro-text .lead{font-size:var(--t-l);max-width:36em}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s5) var(--s4);margin-top:var(--s6)}
+@media (max-width:980px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.cards{grid-template-columns:1fr}}
+.card{display:grid;gap:var(--s2);text-decoration:none}
+.card .frame{aspect-ratio:1.618/1;overflow:hidden;background:var(--sheet)}
+.card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.card:hover img{transform:scale(1.03)}
+.card .meta{display:flex;justify-content:space-between;gap:var(--s2)}
+.card h2{font-size:var(--t-xl);letter-spacing:-.02em}
+.card p{font-size:var(--t-s);color:var(--ink-2)}
+
+/* welcome */
+.welcome{padding-block:calc(var(--s6) * 1.618) calc(var(--s6) * 1.618)}
+.stack{display:flex;flex-direction:column;align-items:center;font-weight:500;font-size:clamp(3.4rem,13vw,10.5rem);letter-spacing:-.055em;line-height:.86;text-align:center}
+.stack .ln{position:relative;display:flex;align-items:center;justify-content:center;gap:.06em}
+.stack .side{position:absolute;top:.35em;font-size:var(--t-xs);font-weight:400;letter-spacing:.05em;line-height:1.3;white-space:nowrap;text-transform:uppercase}
+.stack .side.l{right:calc(100% + var(--s3))}
+.stack .side.r{left:calc(100% + var(--s3))}
+.stack .brk{font-weight:300;margin-block:.04em .16em}
+.peek{position:relative;display:block;width:1.05em;height:.78em;overflow:hidden;margin:0 .04em;background:#fff}
+.peek img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;opacity:0;transition:opacity .35s ease}
+.peek img.on{opacity:1}
+@media (prefers-reduced-motion: reduce){.peek img{transition:none}}
+@media (max-width:700px){.stack .side{position:static;display:none}}
+.welcome-lead{text-align:center;font-size:var(--t-xl);font-weight:300;margin-top:calc(var(--s6) * 1.618)}
+.thumbs{list-style:none;margin:calc(var(--s6) * 1.618) 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--s5)}
+.thumbs a{display:grid;gap:var(--s1);text-decoration:none}
+.thumbs .th{display:block;aspect-ratio:1.618/1;overflow:hidden;background:var(--sheet)}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1);transition:filter .4s ease}
+.thumbs a:hover img{filter:none}
+.thumbs .cap{font-size:var(--t-xs);line-height:1.35;color:var(--ink-2)}
+@media (max-width:900px){.thumbs{grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4)}}
+@media (max-width:560px){.thumbs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* project view */
+.phead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.618fr);gap:var(--s5);align-items:end;margin-bottom:var(--s6)}
+.phead .num{font-size:clamp(3rem,7vw,5.6rem);font-weight:300;letter-spacing:-.05em;line-height:.85}
+.phead .num sup{font-size:.3em;vertical-align:top;letter-spacing:0}
+.phead h1{font-size:var(--t-xxl)}
+.phead .sub{font-size:var(--t-l);color:var(--ink-2);margin-top:var(--s3)}
+@media (max-width:860px){.phead{grid-template-columns:1fr;gap:var(--s3)}}
+.facts{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s3)}
+.facts div{display:grid;gap:2px}
+.facts dt{font-size:var(--t-xs);color:var(--ink-2);text-transform:uppercase;letter-spacing:.05em}
+.facts dd{margin:0;font-size:var(--t-s)}
+.text{display:grid;gap:var(--s3);margin-top:var(--s4)}
+.text p{max-width:62ch}
+.more{display:inline-flex;gap:var(--s1);margin-top:var(--s4);font-size:var(--t-xs);letter-spacing:.05em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:3px;width:max-content}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4)}
+.steps h3{font-size:var(--t-xl);margin:var(--s1) 0}
+.steps p{font-size:var(--t-s);color:var(--ink-2)}
+@media (max-width:760px){.steps{grid-template-columns:1fr}}
+.stat{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.618fr);gap:var(--s5);align-items:baseline;border-block:1px solid var(--rule);padding-block:var(--s4)}
+.stat strong{font-weight:300;font-size:clamp(2rem,4.5vw,3.2rem);letter-spacing:-.03em;line-height:1}
+.stat span{color:var(--ink-2)}
+@media (max-width:600px){.stat{grid-template-columns:1fr;gap:var(--s2)}}
+.pull{font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-.03em;text-transform:uppercase;line-height:1;text-align:center;padding-block:var(--s4)}
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4)}
+.quotes blockquote{margin:0;display:grid;gap:var(--s2);align-content:start}
+.quotes p{font-size:var(--t-l);font-weight:300;line-height:1.4}
+.quotes cite{font-style:normal}
+@media (max-width:760px){.quotes{grid-template-columns:1fr}}
+.pager{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s4);margin-top:var(--s6);border-top:1px solid var(--ink);padding-top:var(--s3)}
+.pager a{text-decoration:none;display:grid;gap:4px}
+.pager a:last-child{text-align:right}
+.pager strong{font-weight:400;font-size:var(--t-xl);text-transform:uppercase;letter-spacing:-.02em;line-height:1}
+
+/* thesis view */
+.thesis-pages{display:grid;gap:var(--s4);margin-top:var(--s6);justify-items:center}
+.thesis-pages img{display:block;max-width:100%;height:auto;background:var(--sheet);box-shadow:0 0 0 1px var(--rule)}
+.thesis-pages img.single{max-width:min(100%,560px)}
+.thesis-note{font-size:var(--t-s);color:var(--ink-2);margin-top:var(--s3)}
+
+/* vita */
+.vita-photo img{width:100%;aspect-ratio:1/1.618;object-fit:cover;display:block}
+.vita h1{font-size:var(--t-xxl);margin-bottom:var(--s4)}
+.vita .about{font-size:var(--t-l);max-width:36em}
+.cv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s5) var(--s4);margin-top:var(--s5)}
+@media (max-width:600px){.cv-grid{grid-template-columns:1fr}}
+.cv-grid h2{font-size:var(--t-xs);letter-spacing:.05em;color:var(--ink-2);border-bottom:1px solid var(--rule);padding-bottom:var(--s1);margin-bottom:var(--s3)}
+.cv{list-style:none;margin:0;padding:0;display:grid;gap:var(--s3)}
+.cv li{display:grid;gap:2px}
+.cv time{font-size:var(--t-xs);color:var(--ink-2);font-variant-numeric:tabular-nums;letter-spacing:.05em}
+.cv span{color:var(--ink-2);font-size:var(--t-s)}
+.contact{margin-top:var(--s6);background:var(--ink);color:var(--on-ink);padding:var(--s5) var(--s4);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.618fr);gap:var(--s4);align-items:end}
+.contact h2{font-size:clamp(2rem,5vw,3.6rem)}
+.contact .row-c{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);align-items:baseline}
+.contact .addr{font-size:var(--t-xl);font-weight:300;user-select:all}
+.contact a{color:var(--on-ink);text-decoration-color:currentColor}
+.copy{font-family:var(--font);font-size:var(--t-xs);letter-spacing:.05em;text-transform:uppercase;background:none;border:1px solid var(--on-ink);color:var(--on-ink);padding:6px 12px;cursor:pointer}
+@media (max-width:760px){.contact{grid-template-columns:1fr;padding:var(--s4) var(--s3)}}
+
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--s1);padding-block:var(--s3) var(--s5);border-top:1px solid var(--rule)}
+
+/* lightbox */
+dialog{border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;width:100vw;height:100vh}
+dialog::backdrop{background:rgba(12,12,13,.94)}
+dialog .lb{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--s2);height:100%;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+dialog img{max-width:100%;max-height:calc(100% - 60px);object-fit:contain;background:#fff}
+dialog p{color:#d8d8d4;font-size:var(--t-xs);letter-spacing:.05em;text-transform:uppercase;text-align:center}
+dialog .close{position:absolute;top:max(14px,env(safe-area-inset-top,0px));right:max(14px,env(safe-area-inset-right,0px));font-family:var(--font);font-size:var(--t-xs);letter-spacing:.05em;text-transform:uppercase;background:none;border:1px solid #777;color:#eee;padding:6px 12px;cursor:pointer}
+
+/* additions: seven works, statements, subtle thesis links */
+.thumbs{grid-template-columns:repeat(7,minmax(0,1fr));gap:var(--s4)}
+@media (max-width:1100px){.thumbs{grid-template-columns:repeat(2,minmax(0,1fr))}.thumbs li:first-child{grid-column:1/-1}}
+.cards li{list-style:none}
+/* overview: master thesis large on top, then six equal tiles in two rows of three */
+.cards{grid-template-columns:repeat(3,minmax(0,1fr));padding:0}
+.cards .card.lead{grid-column:1/-1}
+.cards .card.lead .frame{aspect-ratio:1.618/0.75}
+.cards .card.lead h2{font-size:clamp(1.8rem,4vw,3rem)}
+@media (max-width:980px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.cards{grid-template-columns:1fr}}
+.statements{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4);margin-top:calc(var(--s6) * 1.618);text-align:center}
+.statements p{font-size:clamp(1.2rem,2.2vw,1.7rem);font-weight:300;text-transform:uppercase;letter-spacing:-.02em;line-height:1.1}
+.statements em{font-style:italic;font-weight:400}
+@media (max-width:760px){.statements{grid-template-columns:1fr;gap:var(--s5)}}
+.thesis-link{display:inline-grid;gap:2px;margin-top:var(--s4);text-decoration:none;color:var(--ink-2);font-size:var(--t-s)}
+.thesis-link span:first-child{font-size:var(--t-xs);letter-spacing:.05em;text-transform:uppercase}
+.thesis-link:hover{color:var(--ink)}
+.back{font-size:var(--t-xs);letter-spacing:.05em;text-transform:uppercase;text-decoration:none;color:var(--ink-2)}
+.back:hover{color:var(--ink)}
+/* plan metadata: graphic scale bar (width = 20 m relative to the drawing) and north arrow */
+.plan-meta{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--s3);margin-top:var(--s2)}
+.sbar{width:var(--w);min-width:80px}
+.sbar .bar{display:grid;grid-template-columns:1fr 1fr 2fr;height:5px;border-bottom:1px solid var(--ink)}
+.sbar .bar i{border-left:1px solid var(--ink)}
+.sbar .bar i:last-child{border-right:1px solid var(--ink)}
+.sbar .nums{display:flex;justify-content:space-between;font-size:var(--t-xs);font-variant-numeric:tabular-nums;color:var(--ink);margin-top:3px;line-height:1}
+.north{width:26px;height:26px;flex:none;color:var(--ink)}
+div.box{cursor:default}
+.row.feature{max-width:min(100%,640px);margin-inline:auto;width:100%}
+.section-label{text-align:center}
+/* rule: images side by side always share top and bottom edge */
+.row.pair > figure > .box.free,.row.trio > figure > .box.free,.row.quad > figure > .box.free,.row.split > figure > .box.free{aspect-ratio:1.618/1}
+.row.pair > figure > .box.free img,.row.trio > figure > .box.free img,.row.quad > figure > .box.free img,.row.split > figure > .box.free img{height:100%;object-fit:contain}
+.row.split{grid-template-columns:minmax(0,1fr) minmax(0,1.618fr)}
+.row.split > figure:first-child > .box{aspect-ratio:1/1}
+@media (max-width:760px){.row.split{grid-template-columns:1fr}.row.split > figure:first-child > .box{aspect-ratio:1.618/1}}
+/* justified rows: equal image height, width follows each image's format, nothing cropped */
+.row.just{display:flex;gap:var(--s4);align-items:flex-start}
+.row.just > figure{flex:var(--ar) 1 0;min-width:0}
+.row.just > figure > .box{aspect-ratio:auto!important}
+.row.just > figure > .box img{height:auto!important;object-fit:fill!important}
+@media (max-width:760px){.row.just{flex-direction:column}.row.just > figure{flex:none;width:100%}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#start">Lara Elif Arduç</a>
+    <nav class="tabs" aria-label="Reiter">
+      <a href="#arbeiten">Arbeiten</a>
+      <a href="#vita">Vita &amp; Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- START -->
+<section class="view welcome" id="start" data-view tabindex="-1">
+  <div class="wrap">
+    <h1 class="stack" aria-label="Lara Elif Arduç, Architektin">
+      <span class="ln"><span class="side l">Architektin M.A.</span>Lara</span>
+      <span class="ln">Elif</span>
+      <span class="ln brk" aria-hidden="true">(<a class="peek" href="#am-rand-der-zeit" aria-label="Zeichnungen aus dem Portfolio"><img class="on" src="img/r-axo.jpg" alt=""><img alt=""></a>)<span class="side r">Portfolio 2026</span></span>
+      <span class="ln">Arduç</span>
+    </h1>
+    <p class="welcome-lead">Ich entwerfe für Orte, die aus der Zeit gefallen sind.</p>
+    <ol class="thumbs" aria-label="Projekte">
+      <li><a href="#am-rand-der-zeit"><span class="label">(01)</span><span class="th"><img src="img/r-axo.jpg" alt=""></span><span class="cap">Am Rand der Zeit.<br>Masterthesis</span></a></li>
+      <li><a href="#agri-culture"><span class="label">(02)</span><span class="th"><img src="img/a-skizze.jpg" alt=""></span><span class="cap">Agri+Culture.<br>Städtebau</span></a></li>
+      <li><a href="#stadtkind"><span class="label">(03)</span><span class="th"><img src="img/s-hero.jpg" alt=""></span><span class="cap">Stadtkind.<br>Freiluftschule</span></a></li>
+      <li><a href="#boett-block"><span class="label">(04)</span><span class="th"><img src="img/b-v-laubengang.jpg" alt=""></span><span class="cap">Bött Block Care.<br>Wohnen</span></a></li>
+      <li><a href="#light-shell"><span class="label">(05)</span><span class="th"><img src="img/h-d5.jpg" alt=""></span><span class="cap">Light Shell.<br>Tanzhaus</span></a></li>
+      <li><a href="#wolke-7"><span class="label">(06)</span><span class="th"><img src="img/w-tg.jpg" alt=""></span><span class="cap">Wolke 7.<br>Bachelorthesis</span></a></li>
+      <li><a href="#koenigs-grill"><span class="label">(07)</span><span class="th"><img src="img/k-illu.jpg" alt=""></span><span class="cap">Königs Grill 2.<br>Innenraum &amp; Marketing</span></a></li>
+    </ol>
+    <div class="statements">
+      <p>Bestand ist <em>Zukunft.</em></p>
+      <p>Räume entstehen durch <em>Begegnung.</em></p>
+      <p>Zwischen privat &amp; <em>Gemeinschaft.</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- ARBEITEN -->
+<section class="view" id="arbeiten" data-view tabindex="-1" hidden>
+  <div class="wrap">
+    <div class="gold">
+      <div class="intro-name">
+        <p class="label mark">Ausgewählte Arbeiten 2023–2026</p>
+        <h1 style="margin-top:21px">Arbeiten.</h1>
+      </div>
+      <div class="intro-text">
+        <p class="lead">Tankstellen, Autobahnkreuze, Markthallen, Bunker, Tiefgaragen und ein Imbiss: Ich suche in bestehenden Orten nach dem, was sie noch werden können.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <a class="card lead" href="#am-rand-der-zeit"><div class="frame"><img src="img/r-axo.jpg" alt="Axonometrie Park, Halle und Pavillon" loading="lazy"></div><div class="meta"><span class="label">01°</span><span class="label muted">Masterthesis · 2026</span></div><h2>Am Rand der Zeit.</h2><p>Umerzählen einer Tankstelle</p></a>
+      <a class="card" href="#agri-culture"><div class="frame"><img src="img/a-skizze.jpg" alt="Skizze Wohnen über dem Verkehr" loading="lazy"></div><div class="meta"><span class="label">02°</span><span class="label muted">2024</span></div><h2>Agri+Culture.</h2><p>Stadtlandschaft über dem Autobahnkreuz</p></a>
+      <a class="card" href="#stadtkind"><div class="frame"><img src="img/s-hero.jpg" alt="Lernflur der Freiluftschule" loading="lazy"></div><div class="meta"><span class="label">03°</span><span class="label muted">2024</span></div><h2>Stadtkind.</h2><p>Freiluftschule in einer ehemaligen Markthalle</p></a>
+      <a class="card" href="#boett-block"><div class="frame"><img src="img/b-v-laubengang.jpg" alt="Grüner Laubengang" loading="lazy"></div><div class="meta"><span class="label">04°</span><span class="label muted">M.A.</span></div><h2>Bött Block Care.</h2><p>Wohnen über Generationen</p></a>
+      <a class="card" href="#light-shell"><div class="frame"><img src="img/h-d5.jpg" alt="Detail Fassade" loading="lazy"></div><div class="meta"><span class="label">05°</span><span class="label muted">B.A.</span></div><h2>Historical Light Shell.</h2><p>Tanzhaus in einem Bunker</p></a>
+      <a class="card" href="#wolke-7"><div class="frame"><img src="img/w-tg.jpg" alt="Fahrradstation in der Tiefgarage" loading="lazy"></div><div class="meta"><span class="label">06°</span><span class="label muted">Bachelorthesis · 22/23</span></div><h2>Wolke 7.</h2><p>Umnutzung einer Tiefgarage</p></a>
+      <a class="card" href="#koenigs-grill"><div class="frame"><img src="img/k-illu.jpg" alt="Illustration: Hand mit Döner" loading="lazy"></div><div class="meta"><span class="label">07°</span><span class="label muted">seit 2024</span></div><h2>Königs Grill 2.</h2><p>Innenraum und Marketing für einen Imbiss</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- 01 -->
+<section class="view" id="am-rand-der-zeit" data-view tabindex="-1" hidden>
+  <div class="wrap">
+    <header class="phead">
+      <div><p class="num">01<sup>°</sup></p><p class="label mark" style="margin-top:21px">Work 01 / 07</p></div>
+      <div><h1>Am Rand der Zeit.</h1><p class="sub">Umerzählen einer Tankstelle</p></div>
+    </header>
+    <div class="gold rev">
+      <div>
+        <dl class="facts">
+          <div><dt>Thema</dt><dd>Masterthesis, Umnutzung obsoleter Infrastruktur</dd></div>
+          <div><dt>Jahr</dt><dd>2026, Einzelarbeit</dd></div>
+          <div><dt>Betreuung</dt><dd>Prof. Kazu Blumfeld Hanada, Prof. Lucio Nardi</dd></div>
+        </dl>
+        <div class="text">
+          <p>Mit der Verkehrswende fallen Tankstellen aus der Zeit. Die Arbeit liest solche obsoleten Orte der urbanen Peripherie nicht als Restflächen, sondern als Möglichkeitsräume für neue Nutzungen und Bedeutungen. Grundlage sind eine Analyse der Peripherie und ein Katalog von vierzehn bestehenden Tankstellen.</p>
+          <p>Der Entwurf setzt an einer Tankstelle mit Autohaus an und erzählt den Ort in drei Zeitschritten: heute, als Ruine und umerzählt. Das Tragwerk bleibt stehen, die Natur zieht als dauerhafte Mitnutzerin ein, und ein Park mit Kiosk und Pavillon wird zum neuen Treffpunkt.</p>
+        </div>
+        <a class="thesis-link" href="#masterthesis"><span>Die ganze Arbeit</span><span>Masterthesis lesen, 101 Seiten →</span></a>
+      </div>
+      <figure><button class="box tall" type="button" data-cap="Visualisierung · Peripherie-Pavillon"><img src="img/r-hero.jpg" alt="Visualisierung des Peripherie-Pavillons mit begrüntem Dach" loading="lazy"></button><figcaption><b>Visualisierung</b> Peripherie-Pavillon</figcaption></figure>
+    </div>
+    <div class="rows">
+      <div class="row pair">
+        <figure><button class="box" type="button" data-cap="Übersichtsplan · zwischen Kanal, Autobahn und Bauernschaften"><img src="img/r-plan.jpg" alt="Übersichtsplan" loading="lazy"></button><figcaption><b>Übersichtsplan</b> Kanal, Autobahn, Bauernschaften</figcaption></figure>
+        <figure><button class="box cover" type="button" data-cap="Unordnung · Baumaterial aus dem Rückbau"><img src="img/r-unordnung.jpg" alt="Haufen aus Stahlträgern, Betonteilen und Fensterrahmen auf einer Wiese" loading="lazy" style="object-position:center 88%"></button><figcaption><b>Unordnung</b> Baumaterial aus dem Rückbau</figcaption></figure>
+      </div>
+      <div class="steps">
+        <div><p class="label muted">1988 – heute</p><h3>Heute.</h3><p>Tankstelle als fossiles Versorgungssystem.</p></div>
+        <div><p class="label muted">Nach der Verkehrswende</p><h3>Ruine.</h3><p>Leerstand entsteht, Terrain Vague kehrt zurück.</p></div>
+        <div><p class="label muted">Entwurf</p><h3>Umerzählen.</h3><p>Kiosk mit Parklandschaft, die Natur als Mitnutzerin.</p></div>
+      </div>
+      <div class="row trio">
+        <figure><button class="box tall cover" type="button" data-cap="Heute · die Tankstelle mit Autohaus"><img src="img/r-bestand.jpg" alt="Tankstelle heute" loading="lazy"></button><figcaption><b>Heute</b> Tankstelle mit Autohaus</figcaption></figure>
+        <figure><button class="box tall cover" type="button" data-cap="Ruine · das Autohaus als Lost Place"><img src="img/r-ruine-foto.jpg" alt="Autohaus als Ruine" loading="lazy"></button><figcaption><b>Ruine</b> das Autohaus als Lost Place</figcaption></figure>
+        <figure><button class="box tall cover" type="button" data-cap="Umerzählt · Skate/Park in der Halle"><img src="img/r-skate.jpg" alt="Skatepark in der Halle" loading="lazy"></button><figcaption><b>Umerzählt</b> Skate/Park in der Halle</figcaption></figure>
+      </div>
+      <div class="row just">
+        <figure style="--ar:1.8109"><button class="box" type="button" data-cap="Ruine · das Gerüst bleibt stehen, die Natur zieht ein"><img src="img/r-ruine.jpg" alt="Isometrie der Ruine" loading="lazy"></button><figcaption><b>Ruine</b> das Gerüst bleibt stehen</figcaption></figure>
+        <figure style="--ar:1.2570"><button class="box" type="button" data-cap="Ruinieren · Freilegen des Tragwerks in sechs Schritten"><img src="img/r-ruinieren.jpg" alt="Freilegen des Tragwerks" loading="lazy"></button><figcaption><b>Ruinieren</b> Tragwerk in sechs Schritten</figcaption></figure>
+      </div>
+      <div class="row">
+        <figure><button class="box" type="button" data-cap="Axonometrie · Park, Halle und Pavillon"><img src="img/r-axo.jpg" alt="Axonometrie von Park, Halle und Pavillon" loading="lazy"></button><figcaption><b>Axonometrie</b> Park, Halle und Pavillon</figcaption></figure>
+      </div>
+      <div class="row just">
+        <figure style="--ar:1.8000"><button class="box free" type="button" data-cap="Grundriss EG · Halle, Skate und Park"><img src="img/r-eg.jpg" alt="Grundriss Erdgeschoss" loading="lazy"></button>
+          <figcaption><b>Grundriss EG</b> Halle, Skate und Park</figcaption></figure>
+        <figure style="--ar:1.8000"><button class="box free" type="button" data-cap="Grundriss OG · Halle, Lounge"><img src="img/r-og.jpg" alt="Grundriss Obergeschoss" loading="lazy"></button>
+          <figcaption><b>Grundriss OG</b> Halle, Lounge</figcaption></figure>
+      </div>
+      <div class="row">
+        <figure><button class="box free" type="button" data-cap="Schnitt · Halle mit Tragwerk des Bestands und Peripherie-Pavillon"><img src="img/r-schnitt.jpg" alt="Schnitt durch Halle und Pavillon" loading="lazy"></button>
+          <figcaption><b>Schnitt</b> Halle und Peripherie-Pavillon mit begehbarem Dach</figcaption></figure>
+      </div>
+      <div class="row">
+        <figure><button class="box free" type="button" data-cap="Ansicht Süd · Ansicht Ost · Halle und Peripherie-Pavillon"><img src="img/r-ansicht.jpg" alt="Ansicht Süd und Ost" loading="lazy"></button>
+          <figcaption><b>Ansicht Süd · Ost</b> Halle und Peripherie-Pavillon</figcaption></figure>
+      </div>
+    </div>
+    <nav class="pager" aria-label="Projekte blättern"><a href="#arbeiten"><span class="label muted">← Übersicht</span><strong>Arbeiten</strong></a><a href="#agri-culture"><span class="label muted">Nächstes Projekt →</span><strong>Agri+Culture.</strong></a></nav>
+  </div>
+</section>
+
+<!-- 02 KÖNIGS GRILL -->
+<section class="view" id="koenigs-grill" data-view tabindex="-1" hidden>
+  <div class="wrap">
+    <header class="phead">
+      <div><p class="num">07<sup>°</sup></p><p class="label mark" style="margin-top:21px">Work 07 / 07</p></div>
+      <div><h1>Königs Grill 2.</h1><p class="sub">Innenraum und Marketing für einen Imbiss</p></div>
+    </header>
+    <div class="gold rev">
+      <div>
+        <dl class="facts">
+          <div><dt>Thema</dt><dd>Umbau, Innenraum, Lichtkonzept und Marketing</dd></div>
+          <div><dt>Zeitraum</dt><dd>seit 2024, laufend</dd></div>
+          <div><dt>Rolle</dt><dd>Planung, Gestaltung und das komplette Marketing</dd></div>
+          <div><dt>Status</dt><dd>Eröffnet im November 2024</dd></div>
+        </dl>
+        <div class="text">
+          <p>Aus einem bestehenden Imbiss wurde Königs Grill 2. Ich habe den Umbau geplant: Grundriss, Gastraum, Theke und Lichtkonzept, vom 3D-Modell bis zur Umsetzung.</p>
+          <p>Dazu kommt das komplette Marketing, das ich bis heute betreue. Alles folgt einer Linie aus Schwarz, Gold und der Krone.</p>
+        </div>
+      </div>
+      <figure><button class="box tall" type="button" data-cap="Gastraum · nach dem Umbau"><img src="img/k-laden.jpg" alt="Gastraum mit Holztischen und Bildern an der Wand" loading="lazy" style="object-fit:cover"></button><figcaption><b>Gastraum</b> nach dem Umbau</figcaption></figure>
+    </div>
+    <div class="rows">
+      <div class="row just">
+        <figure style="--ar:0.7067"><button class="box tall" type="button" data-cap="Grundriss · Renovierung 2024"><img src="img/k-grundriss.jpg" alt="Grundriss Renovierung" loading="lazy"></button><figcaption><b>Grundriss</b> Renovierung</figcaption></figure>
+        <figure style="--ar:0.7067"><button class="box tall" type="button" data-cap="Lichtkonzept"><img src="img/k-licht.jpg" alt="Lichtkonzept" loading="lazy"></button><figcaption><b>Lichtkonzept</b></figcaption></figure>
+        <figure style="--ar:1.2442"><button class="box tall" type="button" data-cap="3D-Modell · Theke"><img src="img/k-3d.jpg" alt="3D-Modell der Theke" loading="lazy" style="object-fit:cover"></button><figcaption><b>3D-Modell</b> Theke</figcaption></figure>
+      </div>
+      <div class="stat">
+        <p class="label mark">Marketing</p>
+        <div><p style="max-width:36em">Den gesamten Auftritt, von der Speisekarte bis zu Social Media, gestalte und betreue ich bis heute.</p>
+        <a class="thesis-link" href="https://www.instagram.com/koenigsgrill2ms/" target="_blank" rel="noopener"><span>Instagram</span><span>@koenigsgrill2ms ansehen →</span></a></div>
+      </div>
+    </div>
+    <nav class="pager" aria-label="Projekte blättern"><a href="#wolke-7"><span class="label muted">← Voriges Projekt</span><strong>Wolke 7.</strong></a><a href="#arbeiten"><span class="label muted">Zurück →</span><strong>Arbeiten</strong></a></nav>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="view" id="agri-culture" data-view tabindex="-1" hidden>
+  <div class="wrap">
+    <header class="phead">
+      <div><p class="num">02<sup>°</sup></p><p class="label mark" style="margin-top:21px">Work 02 / 07</p></div>
+      <div><h1>Agri+Culture.</h1><p class="sub">Stadtlandschaft 2070</p></div>
+    </header>
+    <div class="gold">
+      <div>
+        <dl class="facts">
+          <div><dt>Thema</dt><dd>Städtebaulicher Ideenwettbewerb</dd></div>
+          <div><dt>Jahr</dt><dd>2024</dd></div>
+          <div><dt>Lehrstuhl</dt><dd>Prof. Kazu Blumfeld Hanada</dd></div>
+          <div><dt>Team</dt><dd>mit Gresa Buleshkaj und Melike Toprak</dd></div>
+        </dl>
+        <div class="text">
+          <p>Der Entwurf überbaut Autobahnkreuze und macht aus monofunktionalen Verkehrsräumen produktive Lebensräume. Auf dem Plateau entstehen Wohn- und Landwirtschaftsflächen, die regionale Versorgung, urbane Produktion und gemeinschaftliche Nutzungen verbinden.</p>
+          <p>Das System ist skalierbar und lässt sich auf weitere Knotenpunkte übertragen.</p>
+        </div>
+      </div>
+      <figure><button class="box" type="button" data-cap="Visionsisometrie · Plateau über dem Autobahnkreuz"><img src="img/a-hero.jpg" alt="Isometrie des Plateaus über dem Autobahnkreuz" loading="lazy"></button><figcaption><b>Visionsisometrie</b> Plateau über dem Autobahnkreuz</figcaption></figure>
+    </div>
+    <div class="rows">
+      <div class="stat"><strong>58.520 m²</strong><span>neue Fläche auf dem Plateau, ohne zusätzliche Versiegelung</span></div>
+      <div class="row pair">
+        <figure><button class="box" type="button" data-cap="Lageplan · Plateau über dem Autobahnkreuz"><img src="img/a-lage.jpg" alt="Lageplan" loading="lazy"></button><figcaption><b>Lageplan</b> Plateau über dem Autobahnkreuz</figcaption></figure>
+        <figure><button class="box" type="button" data-cap="Replikation · acht Autobahnkreuze"><img src="img/a-repl.jpg" alt="Replikation" loading="lazy"></button><figcaption><b>Replikation</b> acht Autobahnkreuze</figcaption></figure>
+      </div>
+      <div class="row pair">
+        <figure><button class="box" type="button" data-cap="Schichten · vom Autobahnkreuz zum Park"><img src="img/a-schichten.jpg" alt="Schichten" loading="lazy"></button><figcaption><b>Schichten</b> vom Autobahnkreuz zum Park</figcaption></figure>
+        <figure><button class="box" type="button" data-cap="Flächenverbrauch · das Plateau schafft 58.520 m² ohne zusätzliche Versiegelung"><img src="img/a-flaeche.jpg" alt="Flächenverbrauch" loading="lazy"></button><figcaption><b>Flächenverbrauch</b> Plateau und Siedlung</figcaption></figure>
+      </div>
+      <div class="row">
+        <figure><button class="box" type="button" data-cap="Visualisierung · Gärten und Gewächshäuser auf dem Plateau"><img src="img/a-vis.jpg" alt="Visualisierung" loading="lazy" style="object-fit:cover"></button><figcaption><b>Visualisierung</b> Gärten und Gewächshäuser auf dem Plateau</figcaption></figure>
+      </div>
+      <div class="row">
+        <figure><button class="box free" type="button" data-cap="Schnitt A–A · die Autobahn läuft unter dem Plateau"><img src="img/a-aa-full.jpg" alt="Schnitt A–A" loading="lazy"></button><figcaption><b>Schnitt A–A</b> die Autobahn läuft unter dem Plateau</figcaption></figure>
+      </div>
+      <div class="row">
+        <figure><button class="box free" type="button" data-cap="Schnitt B–B · das Plateau steht auf Stützen über der Fahrbahn"><img src="img/a-bb-full.jpg" alt="Schnitt B–B" loading="lazy"></button><figcaption><b>Schnitt B–B</b> das Plateau steht auf Stützen über der Fahrbahn</figcaption></figure>
+      </div>
+      <div class="row">
+        <figure><button class="box free" type="button" data-cap="Grundriss EG · flexible Erdgeschossnutzungen"><img src="img/a-eg.jpg" alt="Grundriss EG" loading="lazy"></button><figcaption><b>Grundriss EG</b> flexible Erdgeschossnutzungen</figcaption></figure>
+      </div>
+      <div class="row">
+        <figure><button class="box free" type="button" data-cap="Grundriss OG · verknüpfbare Wohneinheiten und Dachgewächshäuser"><img src="img/a-og.jpg" alt="Grundriss OG" loading="lazy"></button><figcaption><b>Grundriss OG</b> Wohneinheiten und Dachgewächshäuser</figcaption></figure>
+      </div>
+      <div class="row">
+        <figure><button class="box free" type="button" data-cap="Wohntypologien · Single, Paar, Familie, Senior, Gemeinschaftsküche, Co-Living"><img src="img/a-typ.jpg" alt="Wohntypologien" loading="lazy"></button><figcaption><b>Wohntypologien</b> Single, Paar, Familie, Senior, Co-Living</figcaption></figure>
+      </div>
+      <div class="row pair">
+        <figure><button class="box" type="button" data-cap="Skizze · Wohnen über dem Verkehr"><img src="img/a-skizze.jpg" alt="Skizze" loading="lazy"></button><figcaption><b>Skizze</b> Wohnen über dem Verkehr</figcaption></figure>
+        <figure><button class="box" type="button" data-cap="Skizze · Wohnen und Gärten"><img src="img/a-skizze2.jpg" alt="Skizze" loading="lazy"></button><figcaption><b>Skizze</b> Wohnen und Gärten</figcaption></figure>
+      </div>
+    </div>
+    <nav class="pager" aria-label="Projekte blättern"><a href="#am-rand-der-zeit"><span class="label muted">← Voriges Projekt</span><strong>Am Rand der Zeit.</strong></a><a href="#stadtkind"><span class="label muted">Nächstes Projekt →</span><strong>Stadtkind.</strong></a></nav>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="view" id="stadtkind" data-view tabindex="-1" hidden>
+  <div class="wrap">
+    <header class="phead">
+      <div><p class="num">03<sup>°</sup></p><p class="label mark" style="margin-top:21px">Work 03 / 07</p></div>
+      <div><h1>Stadtkind.</h1><p class="sub">Freiluftschule in einer ehemaligen Markthalle</p></div>
+    </header>
+    <div class="gold">
+      <div>
+        <dl class="facts">
+          <div><dt>Thema</dt><dd>Strategie für eine Freiluftschule</dd></div>
+          <div><dt>Jahr</dt><dd>2024</dd></div>
+          <div><dt>Lehrstuhl</dt><dd>Sölvi Lederer</dd></div>
+          <div><dt>Team</dt><dd>Teamarbeit</dd></div>
+        </dl>
+        <div class="text">
+          <p>In einer ehemaligen Markthalle aus DDR-Zeiten entsteht eine Freiluftschule. Die Stahlsäulen des Bestands bleiben erhalten, eine vorgesetzte Bauglasfassade vermittelt Offenheit.</p>
+          <p>Lerncluster, Freiluftklassenzimmer und zwei Innenhöfe bringen Natur ins Stadtzentrum. Schulhof, Dach und Sporthalle werden Teil eines Freiraums für das ganze Quartier.</p>
+        </div>
+      </div>
+      <figure><div class="box" data-cap="Visualisierung · Lernflur im Obergeschoss"><img src="img/s-hero.jpg" alt="Lernflur im Obergeschoss" loading="lazy" style="object-fit:cover"></div><figcaption><b>Visualisierung</b> Lernflur im Obergeschoss</figcaption></figure>
+    </div>
+    <div class="rows">
+      <p class="pull">„Komm, ich zeig dir meine Schule!“</p>
+      <div class="row pair">
+        <figure><div class="box free" data-cap="Grundriss EG · Verwaltung, Mensa, Fachräume und zwei Innenhöfe"><img src="img/s-eg.jpg" alt="Grundriss Erdgeschoss" loading="lazy"></div><figcaption><b>Grundriss EG</b> Mensa, Fachräume, Innenhöfe</figcaption></figure>
+        <figure><div class="box free" data-cap="Grundriss OG · Lerncluster und Freiluftklassenzimmer"><img src="img/s-og.jpg" alt="Grundriss Obergeschoss" loading="lazy"></div><figcaption><b>Grundriss OG</b> Lerncluster, Freiluftklassen</figcaption></figure>
+      </div>
+      <div class="row">
+        <figure><div class="box free" data-cap="Längsschnitt · Lernflur unter dem Bogendach der Markthalle"><img src="img/s-schnitt.jpg" alt="Längsschnitt" loading="lazy"></div>
+          <figcaption><b>Längsschnitt</b> Lernflur unter dem Bogendach der Markthalle</figcaption></figure>
+      </div>
+      <div class="row split">
+        <figure><div class="box free" data-cap="Fassadenschnitt · Bauglas vor dem Stahlskelett"><img src="img/s-fassade.jpg" alt="Fassadenschnitt" loading="lazy"></div><figcaption><b>Fassadenschnitt</b> Bauglas vor dem Stahlskelett</figcaption></figure>
+        <figure><div class="box" data-cap="Visualisierung · Blick in das Freiluftklassenzimmer"><img src="img/s-fkz.jpg" alt="Freiluftklassenzimmer" loading="lazy" style="object-fit:cover"></div><figcaption><b>Visualisierung</b> Freiluftklassenzimmer</figcaption></figure>
+      </div>
+      <div class="row">
+        <figure><div class="box free" data-cap="Westansicht"><img src="img/s-west.jpg" alt="Westansicht" loading="lazy"></div><figcaption><b>Westansicht</b></figcaption></figure>
+      </div>
+    </div>
+    <nav class="pager" aria-label="Projekte blättern"><a href="#agri-culture"><span class="label muted">← Voriges Projekt</span><strong>Agri+Culture.</strong></a><a href="#boett-block"><span class="label muted">Nächstes Projekt →</span><strong>Bött Block Care.</strong></a></nav>
+  </div>
+</section>
+
+<!-- 05 BÖTT BLOCK -->
+<section class="view" id="boett-block" data-view tabindex="-1" hidden>
+  <div class="wrap">
+    <header class="phead">
+      <div><p class="num">04<sup>°</sup></p><p class="label mark" style="margin-top:21px">Work 04 / 07</p></div>
+      <div><h1>Bött Block Care.</h1><p class="sub">Wie Generationen wohnen</p></div>
+    </header>
+    <div class="gold rev">
+      <div>
+        <dl class="facts">
+          <div><dt>Thema</dt><dd>Mehrgenerationenwohnen im Bestand</dd></div>
+          <div><dt>Modul</dt><dd>ma.m2.1 Stegreif</dd></div>
+          <div><dt>Betreuung</dt><dd>Karola Schaefermeier M.A.</dd></div>
+          <div><dt>Team</dt><dd>mit Marina Banach</dd></div>
+        </dl>
+        <div class="text">
+          <p>Im Mehrgenerationenhaus profitieren Menschen auf verschiedene Weisen voneinander. Ältere bekommen Unterstützung im Alltag und Gesellschaft, Jüngere lernen von ihrer Erfahrung. Es entsteht ein Geben und Nehmen.</p>
+          <p>Grüne Laubengänge, Gemeinschaftsräume und ein Schwimmbad auf dem Dach passen sich an die unterschiedlichen Lebensumstände der Bewohnenden an. Die Forderung des Entwurfs: Luxus für alle.</p>
+        </div>
+      </div>
+      <figure><div class="box tall cover" data-cap="Laubengang · grün, offen, gemeinsam"><img src="img/b-v-laubengang.jpg" alt="Laubengang" loading="lazy"></div><figcaption><b>Laubengang</b> grün, offen, gemeinsam</figcaption></figure>
+    </div>
+    <div class="rows">
+      <div class="row feature">
+        <figure><div class="box tall cover" data-cap="Isometrie · Luxus für alle"><img src="img/b-v-iso.jpg" alt="Isometrie" loading="lazy"></div><figcaption><b>Isometrie</b> Luxus für alle</figcaption></figure>
+      </div>
+      <p class="label muted section-label">Weitere Pläne und Bilder</p>
+      <div class="row just">
+        <figure style="--ar:0.8000"><div class="box tall cover" data-cap="Wohnzimmer · gemeinsamer Raum"><img src="img/b-v-wohnzimmer.jpg" alt="Wohnzimmer" loading="lazy"></div><figcaption><b>Wohnzimmer</b> </figcaption></figure>
+        <figure style="--ar:0.8000"><div class="box tall cover" data-cap="Blick durch das Fenster"><img src="img/b-v-fenster.jpg" alt="Fenster" loading="lazy"></div><figcaption><b>Fenster</b> </figcaption></figure>
+        <figure style="--ar:0.8000"><div class="box tall cover" data-cap="Protagonisten · Frau Ahmed, Familie Nguyen, Herr Felix, Lena"><img src="img/b-v-protag.jpg" alt="Protagonisten" loading="lazy"></div><figcaption><b>Protagonisten</b> </figcaption></figure>
+        <figure style="--ar:0.7057"><div class="box tall" data-cap="Grundriss 1. OG"><img src="img/b-gr1.jpg" alt="Grundriss 1. OG" loading="lazy"></div><figcaption><b>Grundriss 1. OG</b> </figcaption></figure>
+      </div>
+      <div class="row just">
+        <figure style="--ar:1.4981"><div class="box" data-cap="Lageplan"><img src="img/b-lage.jpg" alt="Lageplan" loading="lazy"></div><figcaption><b>Lageplan</b> </figcaption></figure>
+        <figure style="--ar:2.0812"><div class="box" data-cap="Wohnungen · 16 bis 45 m²"><img src="img/b-wohnungen.jpg" alt="Wohnungen" loading="lazy"></div><figcaption><b>Wohnungen</b> </figcaption></figure>
+        <figure style="--ar:2.2910"><div class="box" data-cap="Ansicht Süd"><img src="img/b-sued.jpg" alt="Ansicht Süd" loading="lazy"></div><figcaption><b>Ansicht Süd</b> </figcaption></figure>
+        <figure style="--ar:2.4038"><div class="box" data-cap="Schnitt"><img src="img/b-schnitt.jpg" alt="Schnitt" loading="lazy"></div><figcaption><b>Schnitt</b> </figcaption></figure>
+      </div>
+    </div>
+    <nav class="pager" aria-label="Projekte blättern"><a href="#stadtkind"><span class="label muted">← Voriges Projekt</span><strong>Stadtkind.</strong></a><a href="#light-shell"><span class="label muted">Nächstes Projekt →</span><strong>Light Shell.</strong></a></nav>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="view" id="light-shell" data-view tabindex="-1" hidden>
+  <div class="wrap">
+    <header class="phead">
+      <div><p class="num">05<sup>°</sup></p><p class="label mark" style="margin-top:21px">Work 05 / 07</p></div>
+      <div><h1>Historical Light Shell.</h1><p class="sub">Tanzhaus in einem Bunker</p></div>
+    </header>
+    <div class="gold rev">
+      <div>
+        <dl class="facts">
+          <div><dt>Thema</dt><dd>Umnutzung eines Hochbunkers, Skelettbau</dd></div>
+          <div><dt>Modul</dt><dd>ba.m3.3 Skelettbau</dd></div>
+          <div><dt>Team</dt><dd>mit Anna Knüfermann</dd></div>
+        </dl>
+        <div class="text">
+          <p>In einem Hochbunker in der Innenstadt entsteht ein Ort des Zusammentreffens: ein Café mit Bühne im Erdgeschoss, darüber Tanzsäle, oben eine Bar mit Blick über die Stadt.</p>
+          <p>Durchgängige Oberlichter verbinden das Spiel des Lichts mit der Bewegung im Raum. Von Glas umfasst, löst sich ein neuer Kern aus der alten Hülle des Bunkers.</p>
+        </div>
+      </div>
+      <figure><div class="box tall" data-cap="Modell · der neue Kern löst sich aus der Bunkerhülle"><img src="img/h-hero.jpg" alt="Arbeitsmodell" loading="lazy" style="object-fit:cover"></div><figcaption><b>Modell</b> der neue Kern löst sich aus der Hülle</figcaption></figure>
+    </div>
+    <div class="rows">
+      <div class="row">
+        <figure><div class="box free" data-cap="Längsschnitt · Tanzsäle, Café und Bar im neuen Kern, eingestellt in die Hülle des Bunkers"><img src="img/h-schnitt.jpg" alt="Längsschnitt" loading="lazy"></div><figcaption><b>Längsschnitt</b> Tanzsäle, Café und Bar im neuen Kern</figcaption></figure>
+      </div>
+      <p class="label mark section-label" style="display:grid;justify-items:center">Details</p>
+      <div class="row just"><figure style="--ar:2.3622"><div class="box" data-cap="Detail 01"><img src="img/h-d1.jpg" alt="Detail 01" loading="lazy"></div><figcaption><b>Detail 01</b> </figcaption></figure><figure style="--ar:2.1429"><div class="box" data-cap="Detail 02"><img src="img/h-d2.jpg" alt="Detail 02" loading="lazy"></div><figcaption><b>Detail 02</b> </figcaption></figure></div>
+      <div class="row just"><figure style="--ar:1.6000"><div class="box" data-cap="Detail 03"><img src="img/h-d3.jpg" alt="Detail 03" loading="lazy"></div><figcaption><b>Detail 03</b> </figcaption></figure><figure style="--ar:1.9502"><div class="box" data-cap="Detail 04"><img src="img/h-d4.jpg" alt="Detail 04" loading="lazy"></div><figcaption><b>Detail 04</b> </figcaption></figure></div>
+      <div class="row just"><figure style="--ar:1.8480"><div class="box" data-cap="Detail 05"><img src="img/h-d5.jpg" alt="Detail 05" loading="lazy"></div><figcaption><b>Detail 05</b> </figcaption></figure><figure style="--ar:1.4610"><div class="box" data-cap="Detail 06"><img src="img/h-d6.jpg" alt="Detail 06" loading="lazy"></div><figcaption><b>Detail 06</b> </figcaption></figure></div>
+      <div class="row just"><figure style="--ar:1.3921"><div class="box" data-cap="Detail 07"><img src="img/h-d7.jpg" alt="Detail 07" loading="lazy"></div><figcaption><b>Detail 07</b> </figcaption></figure><figure style="--ar:1.7839"><div class="box" data-cap="Detail 08"><img src="img/h-d8.jpg" alt="Detail 08" loading="lazy"></div><figcaption><b>Detail 08</b> </figcaption></figure></div>
+      <div class="row">
+        <figure><div class="box" data-cap="Konstruktion · Stahlskelett mit HEM-340-Trägern, Trapezblechdecke und Schichtenfolge"><img src="img/h-konst.jpg" alt="Konstruktion" loading="lazy"></div><figcaption><b>Konstruktion</b> Stahlskelett, HEM 340, Schichtenfolge</figcaption></figure>
+      </div>
+      <div class="row just">
+        <figure style="--ar:1.6100"><div class="box" data-cap="Grundriss EG · Café mit Bühne"><img src="img/h-eg.jpg" alt="Grundriss EG" loading="lazy"></div><figcaption><b>Grundriss EG</b> </figcaption></figure>
+        <figure style="--ar:1.6468"><div class="box" data-cap="Grundriss OG · Tanzsaal"><img src="img/h-og.jpg" alt="Grundriss OG" loading="lazy"></div><figcaption><b>Grundriss OG</b> </figcaption></figure>
+        <figure style="--ar:0.7256"><div class="box" data-cap="Fassade · Ansicht, Fassadenschnitt und Grundriss"><img src="img/h-fassade.jpg" alt="Fassade" loading="lazy"></div><figcaption><b>Fassade</b> </figcaption></figure>
+        <figure style="--ar:1.6667"><div class="box" data-cap="Schwarzplan"><img src="img/h-sp.jpg" alt="Schwarzplan" loading="lazy"></div><figcaption><b>Schwarzplan</b> </figcaption></figure>
+      </div>
+      <div class="row">
+        <figure><div class="box free" data-cap="Ansicht · mit Eingang"><img src="img/h-ansicht.jpg" alt="Ansicht" loading="lazy"></div><figcaption><b>Ansicht</b> mit Eingang</figcaption></figure>
+      </div>
+    </div>
+    <nav class="pager" aria-label="Projekte blättern"><a href="#boett-block"><span class="label muted">← Voriges Projekt</span><strong>Bött Block Care.</strong></a><a href="#wolke-7"><span class="label muted">Nächstes Projekt →</span><strong>Wolke 7.</strong></a></nav>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="view" id="wolke-7" data-view tabindex="-1" hidden>
+  <div class="wrap">
+    <header class="phead">
+      <div><p class="num">06<sup>°</sup></p><p class="label mark" style="margin-top:21px">Work 06 / 07</p></div>
+      <div><h1>Wolke 7.</h1><p class="sub">Umnutzung einer Tiefgarage in einer Großwohnsiedlung</p></div>
+    </header>
+    <div class="gold rev">
+      <div>
+        <dl class="facts">
+          <div><dt>Thema</dt><dd>Bachelorthesis, Interventionsarchitektur</dd></div>
+          <div><dt>Jahr</dt><dd>WiSe 22/23</dd></div>
+          <div><dt>Betreuung</dt><dd>Ulrike Steven, Mark Lemanski</dd></div>
+          <div><dt>Methode</dt><dd>Interviews, Beobachtung, Fotografie</dd></div>
+        </dl>
+        <div class="text">
+          <p>Mit Interviews, Beobachtungen und Fotografie untersuchte ich das Leben in einer Großwohnsiedlung der Nachkriegszeit. Ein zentrales Ergebnis war die große Zahl leerstehender Tiefgaragen und Parkdecks.</p>
+          <p>Daraus entstand MERK!MAL: In drei Tiefgaragen eröffnen eine Fahrradstation, eine Holzwerkstatt und ein Repair Café. Die Parkdecks darüber werden zu Bewegungsparks, die die Bewohnenden selbst bespielen.</p>
+        </div>
+        <a class="thesis-link" href="#bachelorthesis"><span>Die ganze Arbeit</span><span>Bachelorthesis lesen →</span></a>
+      </div>
+      <figure><button class="box tall" type="button" data-cap="Vor Ort · der Entwurf zurück im Quartier"><img src="img/w-hero.jpg" alt="Staffelei mit Entwurfsbild vor einem Hochhaus" loading="lazy" style="object-fit:cover"></button><figcaption><b>Vor Ort</b> der Entwurf zurück im Quartier</figcaption></figure>
+    </div>
+    <div class="rows">
+      <div class="row quad">
+        <figure><button class="box tall cover" type="button" data-cap="Parkdeck · Kreide auf dem Asphalt"><img src="img/w-kreide.jpg" alt="Kreide auf dem Parkdeck" loading="lazy"></button><figcaption><b>Parkdeck</b></figcaption></figure>
+        <figure><button class="box tall cover" type="button" data-cap="Tiefgarage · ein Einkaufswagen"><img src="img/w-wagen.jpg" alt="Einkaufswagen in der Tiefgarage" loading="lazy"></button><figcaption><b>Tiefgarage</b></figcaption></figure>
+        <figure><button class="box tall cover" type="button" data-cap="Rot · Balkone"><img src="img/w-rot.jpg" alt="Rote Balkone" loading="lazy"></button><figcaption><b>Rot</b></figcaption></figure>
+        <figure><button class="box tall cover" type="button" data-cap="Graffiti · „für eine Welt, in die viele Welten passen“"><img src="img/w-graffiti.jpg" alt="Graffiti" loading="lazy"></button><figcaption><b>Graffiti</b></figcaption></figure>
+      </div>
+      <div class="quotes">
+        <blockquote><p>„Seit fünf Jahren steht da ein Einkaufswagen drin und es parken keine Autos in der Tiefgarage.“</p><cite class="label muted">Interview, 2023</cite></blockquote>
+        <blockquote><p>„Die Häuser haben unterschiedliche Farben. Im gelben Haus wohnen wir. Es gibt gelb, rot und blau.“</p><cite class="label muted">Interview, 2022</cite></blockquote>
+        <blockquote><p>„Ich würde ein paar Flächen freilassen, damit die Kinder für sich dort kreativ sein können.“</p><cite class="label muted">Umfrage, 2023</cite></blockquote>
+      </div>
+      <div class="row just">
+        <figure style="--ar:1.9565"><button class="box free" type="button" data-cap="Analyse · Tiefgaragen, Parkdecks und Treffpunkte im Quartier"><img src="img/w-analyse.jpg" alt="Analyseplan" loading="lazy"></button><figcaption><b>Analyse</b> Tiefgaragen und Treffpunkte</figcaption></figure>
+        <figure style="--ar:1.8462"><button class="box free" type="button" data-cap="Netzwerk MERK!MAL · Radstation, Holzwerkstatt, Repair Café"><img src="img/w-netz.jpg" alt="Netzwerkdiagramm" loading="lazy"></button><figcaption><b>Netzwerk</b> drei Aktivwerkstätten</figcaption></figure>
+      </div>
+      <div class="row">
+        <figure><button class="box" type="button" data-cap="Visualisierung · Unten? Ist die Fahrradstation."><img src="img/w-tg.jpg" alt="Fahrradstation in der Tiefgarage" loading="lazy" style="object-fit:cover"></button><figcaption><b>Visualisierung</b> Unten? Ist die Fahrradstation.</figcaption></figure>
+      </div>
+    </div>
+    <nav class="pager" aria-label="Projekte blättern"><a href="#light-shell"><span class="label muted">← Voriges Projekt</span><strong>Light Shell.</strong></a><a href="#koenigs-grill"><span class="label muted">Nächstes Projekt →</span><strong>Königs Grill 2.</strong></a></nav>
+  </div>
+</section>
+
+<!-- THESEN (nur über die Projekte erreichbar) -->
+<section class="view" id="masterthesis" data-view tabindex="-1" hidden>
+  <div class="wrap">
+    <a class="back" href="#am-rand-der-zeit">← Zurück zum Projekt</a>
+    <header class="phead" style="margin-top:34px">
+      <div><p class="label mark">Masterthesis · 2026</p></div>
+      <div><h1>Am Rand der Zeit.</h1><p class="sub">Umerzählen einer Tankstelle. Die vollständige Arbeit.</p></div>
+    </header>
+    <div class="thesis-pages" data-thesis="thesis/master/"></div>
+  </div>
+</section>
+
+<section class="view" id="bachelorthesis" data-view tabindex="-1" hidden>
+  <div class="wrap">
+    <a class="back" href="#wolke-7">← Zurück zum Projekt</a>
+    <header class="phead" style="margin-top:34px">
+      <div><p class="label mark">Bachelorthesis · WiSe 22/23</p></div>
+      <div><h1>Wolke 7.</h1><p class="sub">Leben in einer Großwohnsiedlung.</p><p class="thesis-note">Der Anhang mit den vollständigen Interview-Protokollen ist zum Schutz der Befragten nicht enthalten.</p></div>
+    </header>
+    <div class="thesis-pages" data-thesis="thesis/bachelor/"></div>
+  </div>
+</section>
+
+<!-- VITA -->
+<section class="view vita" id="vita" data-view tabindex="-1" hidden>
+  <div class="wrap">
+    <div class="gold">
+      <figure class="vita-photo"><img src="img/portrait.jpg" alt="Porträt von Lara Elif Arduç" loading="lazy"></figure>
+      <div>
+        <p class="label mark">Junior Architektin M.A.</p>
+        <h1 style="margin-top:21px">Vita.</h1>
+        <p class="about">Mich interessiert die Weiterentwicklung von Bestandsbauten und nachhaltige, zukunftsfähige Planung, vom Städtebau bis zum Innenraum.</p>
+        <div class="cv-grid">
+          <div>
+            <h2>Erfahrung</h2>
+            <ul class="cv">
+              <li><time>seit 2026</time><strong>Vissing Architekten</strong><span>Junior Architektin M.A., zuvor Werkstudium ab 2025</span></li>
+              <li><time>2023 – 2025</time><strong>Wellmeyer.Ehmen Architekten</strong><span>Werkstudium, LP 1–5</span></li>
+              <li><time>seit 2019</time><strong>Gastronomie, Königs Grill 2</strong><span>Innenraum und Marketing</span></li>
+              <li><time>2021</time><strong>Wissenschaftliche Tutorin</strong><span>Lehrstuhl Baukonstruktion</span></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Studium</h2>
+            <ul class="cv">
+              <li><time>2023 – 2026</time><strong>M.A. Architektur</strong><span>MSA Münster School of Architecture</span></li>
+              <li><time>2019 – 2023</time><strong>B.A. Architektur</strong><span>MSA Münster School of Architecture</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact">
+      <h2>Kontakt.</h2>
+      <div class="row-c">
+        <span class="addr" id="mail">lara.arduc@web.de</span>
+        <button class="copy" type="button" id="copyMail">E-Mail kopieren</button>
+        <a class="label" style="color:inherit" href="https://instagram.com/studio.arduc" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPRESSUM -->
+<section class="view" id="impressum" data-view tabindex="-1" hidden>
+  <div class="wrap">
+    <div class="gold">
+      <div><p class="label mark">Rechtliches</p><h1 style="margin-top:21px">Impressum.</h1></div>
+      <div class="text" style="margin-top:0">
+        <p><strong>Angaben gemäß § 5 DDG</strong><br>Lara Elif Arduç<br>Jüdefelderstraße 44<br>48143 Münster</p>
+        <p><strong>Kontakt</strong><br>E-Mail: lara.arduc@web.de</p>
+        <p><strong>Datenschutz</strong><br>Diese Website setzt keine Cookies, verwendet keine Analyse- oder Tracking-Werkzeuge und lädt keine Inhalte von fremden Servern. Schriften und Bilder liegen auf dem eigenen Webspace. Beim Aufruf speichert der Hosting-Anbieter technisch notwendige Zugriffsdaten (z.&nbsp;B. IP-Adresse, Zeitpunkt) in Server-Logfiles. Verantwortlich ist die oben genannte Person. Du hast das Recht auf Auskunft, Berichtigung und Löschung deiner Daten; schreib dafür an die genannte E-Mail-Adresse.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap label muted">
+    <span>© 2026 Lara Elif Arduç</span>
+    <span><a href="#vita">Kontakt</a> · <a href="#impressum">Impressum &amp; Datenschutz</a></span>
+  </div>
+</footer>
+
+<dialog id="lb" aria-label="Bildansicht">
+  <div class="lb">
+    <button class="close" type="button" id="lbClose">Schließen ✕</button>
+    <img id="lbImg" alt="">
+    <p id="lbCap"></p>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var views=[].slice.call(document.querySelectorAll('[data-view]'));
+  var ids=views.map(function(v){return v.id});
+  var tabs=[].slice.call(document.querySelectorAll('.tabs a'));
+  var under={'am-rand-der-zeit':'arbeiten','koenigs-grill':'arbeiten','agri-culture':'arbeiten','stadtkind':'arbeiten','boett-block':'arbeiten','light-shell':'arbeiten','wolke-7':'arbeiten','masterthesis':'arbeiten','bachelorthesis':'arbeiten'};
+  function loadThesis(view){
+    var box=view.querySelector('[data-thesis]');
+    if(!box||box.dataset.loaded)return;
+    box.dataset.loaded='1';
+    var base=box.dataset.thesis;
+    fetch(base+'pages.json').then(function(r){return r.json()}).then(function(pages){
+      pages.forEach(function(p,i){
+        var img=document.createElement('img');
+        img.src=base+p[0];img.width=p[1];img.height=p[2];img.loading='lazy';
+        img.alt='Seite '+(i+1);
+        if(p[1]<p[2])img.className='single';
+        box.appendChild(img);
+      });
+    }).catch(function(){box.textContent='Die Seiten konnten nicht geladen werden. Bitte die Seite neu laden.'});
+  }
+  function show(){
+    var id=(location.hash||'').slice(1);
+    if(ids.indexOf(id)<0)id='start';
+    views.forEach(function(v){v.hidden=v.id!==id});
+    var tabId=under[id]||id;
+    tabs.forEach(function(a){a.getAttribute('href')==='#'+tabId?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current')});
+    loadThesis(document.getElementById(id));
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',show);
+  show();
+
+  var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),cap=document.getElementById('lbCap');
+  document.querySelectorAll('button.box').forEach(function(b){
+    b.addEventListener('click',function(){
+      var i=b.querySelector('img');
+      img.src=i.currentSrc||i.src;img.alt=i.alt;cap.textContent=b.dataset.cap||i.alt;
+      if(lb.showModal)lb.showModal();
+    });
+  });
+  document.getElementById('lbClose').addEventListener('click',function(){lb.close()});
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('lb'))lb.close()});
+
+  var btn=document.getElementById('copyMail');
+  btn.addEventListener('click',function(){
+    var t=document.getElementById('mail').textContent;
+    var done=function(){btn.textContent='Kopiert';setTimeout(function(){btn.textContent='E-Mail kopieren'},1800)};
+    var fallback=function(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Markiert, jetzt kopieren'};
+    try{navigator.clipboard.writeText(t).then(done,fallback)}catch(e){fallback()}
+  });
+  /* bracket on the start page: cycles through drawings from the portfolio */
+  (function(){
+    var peek=document.querySelector('.peek');if(!peek)return;
+    var list=[['r-axo','am-rand-der-zeit'],['r-ruinieren','am-rand-der-zeit'],['r-ruine','am-rand-der-zeit'],
+      ['a-hero','agri-culture'],['a-skizze','agri-culture'],['a-skizze2','agri-culture'],
+      ['b-v-iso','boett-block'],['b-v-protag','boett-block'],
+      ['h-konst','light-shell'],
+      ['w-analyse','wolke-7'],['w-netz','wolke-7'],
+      ['k-illu','koenigs-grill']];
+    list.forEach(function(x){var i=new Image();i.src='img/'+x[0]+'.jpg'});
+    var imgs=peek.querySelectorAll('img'),cur=0,n=0;
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce)return;
+    setInterval(function(){
+      if(document.hidden||document.getElementById('start').hidden)return;
+      n=(n+1)%list.length;var next=imgs[1-cur];
+      var k=n;next.onload=function(){next.classList.add('on');imgs[cur].classList.remove('on');cur=1-cur;peek.href='#'+list[k][1]};
+      next.src='img/'+list[n][0]+'.jpg';
+    },1400);
+  })();
+})();
+</script>
+</body>
+</html>
