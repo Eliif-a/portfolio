@@ -316,6 +316,14 @@ div.box{cursor:default}
 .box .lay-stage .ly4{top:50.222%;--sy:143.2%;animation-delay:0.75s}
 @keyframes layOut{0%,10%{transform:translateY(var(--sy))}42%,82%{transform:translateY(0)}100%{transform:translateY(var(--sy))}}
 @media (prefers-reduced-motion: reduce){.box .lay-stage img.ly{animation:none!important}}
+/* subtle arm movements in the perspectives */
+.box.arm-stage{position:relative;overflow:hidden}
+.box.arm-stage img.arm{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.box.arm-stage .arm-avL{transform-origin:42.78% 76.52%;animation:armUpL 3.6s ease-in-out infinite alternate}
+.box.arm-stage .arm-avR{transform-origin:49.11% 79.66%;animation:armUpR 3.6s ease-in-out infinite alternate;animation-delay:-.3s}
+@keyframes armUpL{from{transform:rotate(0)}to{transform:rotate(4deg)}}
+@keyframes armUpR{from{transform:rotate(0)}to{transform:rotate(-4deg)}}
+@media (prefers-reduced-motion: reduce){.box.arm-stage img.arm{animation:none!important}}
 </style>
 </head>
 <body>
@@ -518,7 +526,7 @@ div.box{cursor:default}
         <figure><button class="box" type="button" data-cap="Flächenverbrauch · das Plateau schafft 58.520 m² ohne zusätzliche Versiegelung"><img src="img/a-flaeche.jpg" alt="Flächenverbrauch" loading="lazy"></button><figcaption><b>Flächenverbrauch</b> Plateau und Siedlung</figcaption></figure>
       </div>
       <div class="row">
-        <figure><button class="box" type="button" data-cap="Visualisierung · Gärten und Gewächshäuser auf dem Plateau"><img src="img/a-vis.jpg" alt="Visualisierung" loading="lazy" style="object-fit:cover"></button><figcaption><b>Visualisierung</b> Gärten und Gewächshäuser auf dem Plateau</figcaption></figure>
+        <figure><button class="box arm-stage" type="button" data-full="img/a-vis.jpg" data-cap="Visualisierung · Gärten und Gewächshäuser auf dem Plateau"><img src="img/a-vis-base.jpg" alt="Visualisierung" loading="lazy" style="object-fit:cover"><img class="arm arm-avL" src="img/a-vis-armL.png" alt="" loading="lazy"><img class="arm arm-avR" src="img/a-vis-armR.png" alt="" loading="lazy"></button><figcaption><b>Visualisierung</b> Gärten und Gewächshäuser auf dem Plateau</figcaption></figure>
       </div>
       <div class="row">
         <figure><button class="box free" type="button" data-cap="Schnitt A–A · die Autobahn läuft unter dem Plateau"><img src="img/a-aa-full.jpg" alt="Schnitt A–A" loading="lazy"></button><figcaption><b>Schnitt A–A</b> die Autobahn läuft unter dem Plateau</figcaption></figure>
