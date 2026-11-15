@@ -305,6 +305,17 @@ div.box{cursor:default}
 .box.ruin-stage .rp6{--n:5;--dx:0%;--dy:5.4%}
 @keyframes ruinOut{0%,8%{transform:translate(var(--dx),var(--dy))}40%,80%{transform:translate(0,0)}100%{transform:translate(var(--dx),var(--dy))}}
 @media (prefers-reduced-motion: reduce){.box.ruin-stage img.rp{animation:none!important}}
+/* Agri+Culture: the layers lift out of the isometry */
+.box .lay-stage{position:relative;display:block;height:100%;aspect-ratio:771/1800;margin:0 auto}
+.box .lay-stage img{position:absolute;left:0;top:0;width:100%;height:auto;object-fit:fill}
+.box .lay-stage img.lb{height:100%}
+.box .lay-stage img.ly{animation:layOut 10s cubic-bezier(.45,0,.2,1) infinite both;will-change:transform}
+.box .lay-stage .ly1{top:0.333%;--sy:580.7%;animation-delay:0.00s}
+.box .lay-stage .ly2{top:18.222%;--sy:443.1%;animation-delay:0.25s}
+.box .lay-stage .ly3{top:34.556%;--sy:276.1%;animation-delay:0.50s}
+.box .lay-stage .ly4{top:50.222%;--sy:143.2%;animation-delay:0.75s}
+@keyframes layOut{0%,10%{transform:translateY(var(--sy))}42%,82%{transform:translateY(0)}100%{transform:translateY(var(--sy))}}
+@media (prefers-reduced-motion: reduce){.box .lay-stage img.ly{animation:none!important}}
 </style>
 </head>
 <body>
@@ -503,7 +514,7 @@ div.box{cursor:default}
         <figure><button class="box" type="button" data-cap="Replikation · acht Autobahnkreuze"><img src="img/a-repl.jpg" alt="Replikation" loading="lazy"></button><figcaption><b>Replikation</b> acht Autobahnkreuze</figcaption></figure>
       </div>
       <div class="row pair">
-        <figure><button class="box" type="button" data-cap="Schichten · vom Autobahnkreuz zum Park"><img src="img/a-schichten.jpg" alt="Schichten" loading="lazy"></button><figcaption><b>Schichten</b> vom Autobahnkreuz zum Park</figcaption></figure>
+        <figure><button class="box" type="button" data-full="img/a-schichten.jpg" data-cap="Schichten · vom Autobahnkreuz zum Park"><span class="lay-stage"><img class="lb" src="img/a-schichten-base.jpg" alt="Schichten" loading="lazy"><img class="ly ly4" src="img/a-schicht-4.png" alt="" loading="lazy"><img class="ly ly3" src="img/a-schicht-3.png" alt="" loading="lazy"><img class="ly ly2" src="img/a-schicht-2.png" alt="" loading="lazy"><img class="ly ly1" src="img/a-schicht-1.png" alt="" loading="lazy"></span></button><figcaption><b>Schichten</b> vom Autobahnkreuz zum Park</figcaption></figure>
         <figure><button class="box" type="button" data-cap="Flächenverbrauch · das Plateau schafft 58.520 m² ohne zusätzliche Versiegelung"><img src="img/a-flaeche.jpg" alt="Flächenverbrauch" loading="lazy"></button><figcaption><b>Flächenverbrauch</b> Plateau und Siedlung</figcaption></figure>
       </div>
       <div class="row">
