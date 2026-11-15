@@ -272,6 +272,19 @@ div.box{cursor:default}
 .w7seq-box img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;visibility:hidden}
 .w7seq-box img.on{visibility:visible}
 .w7seq-row{max-width:min(100%,480px)}
+/* Light Shell section: dancing and walking silhouettes */
+.sil-stage{position:relative}
+.sil-stage:not(.ready) .sil,.sil-stage:not(.ready) .sil-walker{visibility:hidden}
+.box.sil-stage img.sil{position:absolute;display:block;height:auto;pointer-events:none;object-fit:fill}
+.box.sil-stage img.sil-break{left:48.9%;top:29.444%;width:2.7%;transform-origin:50% 100%;animation:silFreeze 1.6s ease-in-out infinite}
+.box.sil-stage img.sil-ballet{left:44.7%;top:62.917%;width:5.3%;transform-origin:45% 100%;animation:silPirouette 2.6s ease-in-out infinite}
+.box.sil-stage .sil-walker{position:absolute;left:49.95%;top:83.542%;width:3.4%;animation:silWalk 18s linear infinite}
+.box.sil-stage .sil-walker img.sil{position:static;width:100%;animation:silBob .55s ease-in-out infinite alternate}
+@keyframes silFreeze{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg) translateY(-4%)}}
+@keyframes silPirouette{0%,100%{transform:scaleX(1)}25%{transform:scaleX(.12)}50%{transform:scaleX(-1)}75%{transform:scaleX(.12)}}
+@keyframes silWalk{0%{left:49.95%;transform:scaleX(1)}36%{left:74%;transform:scaleX(1)}38%{left:74%;transform:scaleX(-1)}86%{left:22%;transform:scaleX(-1)}88%{left:22%;transform:scaleX(1)}100%{left:49.95%;transform:scaleX(1)}}
+@keyframes silBob{from{transform:translateY(0)}to{transform:translateY(-3%)}}
+@media (prefers-reduced-motion: reduce){.box.sil-stage img.sil,.box.sil-stage .sil-walker{animation:none!important}}
 </style>
 </head>
 <body>
@@ -611,7 +624,7 @@ div.box{cursor:default}
     </div>
     <div class="rows">
       <div class="row">
-        <figure><div class="box free" data-cap="Längsschnitt · Tanzsäle, Café und Bar im neuen Kern, eingestellt in die Hülle des Bunkers"><img src="img/h-schnitt.jpg" alt="Längsschnitt" loading="lazy"></div><figcaption><b>Längsschnitt</b> Tanzsäle, Café und Bar im neuen Kern</figcaption></figure>
+        <figure><div class="box free sil-stage" data-cap="Längsschnitt · Tanzsäle, Café und Bar im neuen Kern, eingestellt in die Hülle des Bunkers"><img src="img/h-schnitt-leer.jpg" alt="Längsschnitt" loading="lazy"><img class="sil sil-break" src="img/h-sil-break.png" alt="" aria-hidden="true"><img class="sil sil-ballet" src="img/h-sil-ballet.png" alt="" aria-hidden="true"><span class="sil-walker" aria-hidden="true"><img class="sil sil-walk" src="img/h-sil-walk.png" alt=""></span></div><figcaption><b>Längsschnitt</b> Tanzsäle, Café und Bar im neuen Kern</figcaption></figure>
       </div>
       <p class="label mark section-label" style="display:grid;justify-items:center">Details</p>
       <div class="row just"><figure style="--ar:2.3622"><div class="box" data-cap="Detail 01"><img src="img/h-d1.jpg" alt="Detail 01" loading="lazy"></div><figcaption><b>Detail 01</b> </figcaption></figure><figure style="--ar:2.1429"><div class="box" data-cap="Detail 02"><img src="img/h-d2.jpg" alt="Detail 02" loading="lazy"></div><figcaption><b>Detail 02</b> </figcaption></figure></div>
@@ -864,6 +877,13 @@ div.box{cursor:default}
       imgs[i].className='';imgs[next].className='on';i=next;
       if(cnt)cnt.textContent=String(i+1).padStart(2,'0')+' / '+n;
     },450);
+  })();
+  /* Light Shell: show the silhouettes once the section drawing has loaded */
+  (function(){
+    var st=document.querySelector('.sil-stage');if(!st)return;
+    var b=st.querySelector('img');
+    function go(){st.classList.add('ready')}
+    if(b.complete&&b.naturalWidth)go();else b.addEventListener('load',go);
   })();
 })();
 </script>
