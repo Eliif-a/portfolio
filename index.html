@@ -122,9 +122,10 @@ figcaption .scale{font-size:var(--t-xs);margin-left:auto;white-space:nowrap}
 .stack .side.l{right:calc(100% + var(--s3))}
 .stack .side.r{left:calc(100% + var(--s3))}
 .stack .brk{font-weight:200;font-size:1.5em;margin-block:.02em .1em}
-.peek{position:relative;display:block;width:1.3em;height:.82em;overflow:hidden;margin:0 .03em;background:#fff}
+.peek{position:relative;display:block;width:1.3em;height:.82em;overflow:hidden;margin:0 .06em;background:#fff;transition:width .45s cubic-bezier(.4,0,.2,1),height .45s cubic-bezier(.4,0,.2,1)}
 .peek img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;visibility:hidden}
 .peek img.on{visibility:visible}
+@media (prefers-reduced-motion: reduce){.peek{transition:none}}
 @media (max-width:700px){.stack .side{position:static;display:none}}
 .welcome-lead{text-align:center;font-size:var(--t-xl);font-weight:300;margin-top:calc(var(--s6) * 1.618)}
 .thumbs{list-style:none;margin:calc(var(--s6) * 1.618) 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--s5)}
@@ -830,14 +831,21 @@ div.box{cursor:default}
       ['hl-s-garten','stadtkind'],['a-skizze2','agri-culture']];
     list.forEach(function(x){var i=new Image();i.src='img/'+x[0]+'.jpg'});
     var imgs=peek.querySelectorAll('img'),cur=0,n=0;
+    /* the bracket hugs the image: same height, width follows the image's format (whole image, never cropped) */
+    function fit(img){
+      var ar=img.naturalWidth/img.naturalHeight||1.4, h=.82, w=h*ar;
+      if(w>1.6){w=1.6;h=w/ar}
+      peek.style.width=w.toFixed(3)+'em';peek.style.height=h.toFixed(3)+'em';
+    }
+    if(imgs[0].complete)fit(imgs[0]);else imgs[0].onload=function(){fit(imgs[0])};
     var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if(reduce)return;
     setInterval(function(){
       if(document.hidden||document.getElementById('start').hidden)return;
       n=(n+1)%list.length;var next=imgs[1-cur],k=n;
-      next.onload=function(){next.className='on';imgs[cur].className='';cur=1-cur;peek.href='#'+list[k][1]};
+      next.onload=function(){fit(next);next.className='on';imgs[cur].className='';cur=1-cur;peek.href='#'+list[k][1]};
       next.src='img/'+list[n][0]+'.jpg';
-    },1600);
+    },1800);
   })();
 })();
 </script>
