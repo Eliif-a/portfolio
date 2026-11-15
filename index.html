@@ -122,12 +122,9 @@ figcaption .scale{font-size:var(--t-xs);margin-left:auto;white-space:nowrap}
 .stack .side.l{right:calc(100% + var(--s3))}
 .stack .side.r{left:calc(100% + var(--s3))}
 .stack .brk{font-weight:200;font-size:1.5em;margin-block:.02em .1em}
-.peek{position:relative;display:block;width:1.2em;height:.82em;overflow:hidden;margin:0 .03em;background:var(--ink);transition:width .38s cubic-bezier(.2,.9,.2,1)}
-.peek img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;visibility:hidden}
-.peek img.on{visibility:visible;z-index:2;animation:peekIn .3s cubic-bezier(.2,.9,.2,1) both}
-.peek img.off{visibility:visible;z-index:1}
-@keyframes peekIn{from{clip-path:inset(100% 0 0 0);transform:scale(1.12)}to{clip-path:inset(0 0 0 0);transform:scale(1)}}
-@media (prefers-reduced-motion: reduce){.peek,.peek img.on{transition:none;animation:none}}
+.peek{position:relative;display:block;width:1.3em;height:.82em;overflow:hidden;margin:0 .03em;background:#fff}
+.peek img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;visibility:hidden}
+.peek img.on{visibility:visible}
 @media (max-width:700px){.stack .side{position:static;display:none}}
 .welcome-lead{text-align:center;font-size:var(--t-xl);font-weight:300;margin-top:calc(var(--s6) * 1.618)}
 .thumbs{list-style:none;margin:calc(var(--s6) * 1.618) 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--s5)}
@@ -824,30 +821,23 @@ div.box{cursor:default}
     var fallback=function(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Markiert, jetzt kopieren'};
     try{navigator.clipboard.writeText(t).then(done,fallback)}catch(e){fallback()}
   });
-  /* bracket on the start page: fast cuts through the highlight images; the bracket takes each image's format */
+  /* bracket on the start page: calm, clean cuts through the highlight images, each shown whole */
   (function(){
     var peek=document.querySelector('.peek');if(!peek)return;
     var list=[['hl-w-hand','wolke-7'],['r-hero','am-rand-der-zeit'],['hl-b-laubengang','boett-block'],['s-hero','stadtkind'],
       ['a-skizze','agri-culture'],['w-hero','wolke-7'],['r-skate','am-rand-der-zeit'],['hl-b-wohnzimmer','boett-block'],
-      ['s-fkz','stadtkind'],['a-hero','agri-culture'],['hl-r-tankstelle','am-rand-der-zeit'],['hl-b-fenster','boett-block'],
-      ['hl-s-garten','stadtkind'],['a-skizze2','agri-culture'],['r-ruine-foto','am-rand-der-zeit']];
-    var ar={};
-    list.forEach(function(x){var i=new Image();i.onload=function(){ar[x[0]]=i.naturalWidth/i.naturalHeight};i.src='img/'+x[0]+'.jpg'});
+      ['s-fkz','stadtkind'],['a-hero','agri-culture'],['hl-r-moebel','am-rand-der-zeit'],['hl-b-fenster','boett-block'],
+      ['hl-s-garten','stadtkind'],['a-skizze2','agri-culture']];
+    list.forEach(function(x){var i=new Image();i.src='img/'+x[0]+'.jpg'});
     var imgs=peek.querySelectorAll('img'),cur=0,n=0;
-    function width(k){var a=ar[k]||1.4;return Math.min(1.6,Math.max(.55,a*.82)).toFixed(3)+'em'}
-    imgs[0].src='img/'+list[0][0]+'.jpg';imgs[0].className='on';peek.href='#'+list[0][1];
-    imgs[0].onload=function(){ar[list[0][0]]=imgs[0].naturalWidth/imgs[0].naturalHeight;peek.style.width=width(list[0][0])};
     var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if(reduce)return;
     setInterval(function(){
       if(document.hidden||document.getElementById('start').hidden)return;
       n=(n+1)%list.length;var next=imgs[1-cur],k=n;
-      next.onload=function(){
-        peek.style.width=width(list[k][0]);
-        imgs[cur].className='off';next.className='on';cur=1-cur;peek.href='#'+list[k][1];
-      };
+      next.onload=function(){next.className='on';imgs[cur].className='';cur=1-cur;peek.href='#'+list[k][1]};
       next.src='img/'+list[n][0]+'.jpg';
-    },1000);
+    },1600);
   })();
 })();
 </script>
