@@ -248,6 +248,25 @@ div.box{cursor:default}
 .row.just > figure > .box{aspect-ratio:auto!important}
 .row.just > figure > .box img{height:auto!important;object-fit:fill!important}
 @media (max-width:760px){.row.just{flex-direction:column}.row.just > figure{flex:none;width:100%}}
+/* phone: bigger name, projects clearly tappable */
+.thumbs .cap b{font-weight:500;color:var(--ink)}
+.thumbs .cap b::after{content:" →"}
+.all-works{display:flex;justify-content:center;margin-top:var(--s5)}
+.all-works a{font-size:var(--t-xs);letter-spacing:.05em;text-transform:uppercase;text-decoration:none;border:1px solid var(--ink);padding:14px 26px}
+.all-works a:hover{background:var(--ink);color:var(--paper)}
+@media (hover:none){.thumbs img{filter:none}}
+@media (max-width:700px){
+  .stack{font-size:24vw}
+  .welcome{padding-block:calc(var(--s6) * 1.2) var(--s6)}
+  .welcome-lead{font-size:var(--t-l);margin-top:var(--s5)}
+  .thumbs{grid-template-columns:1fr;gap:var(--s4);margin-top:var(--s5)}
+  .thumbs li:first-child{grid-column:auto}
+  .thumbs a{grid-template-columns:auto 1fr;grid-template-areas:"th th" "num cap";column-gap:var(--s2);row-gap:var(--s2)}
+  .thumbs .th{grid-area:th}
+  .thumbs .label{grid-area:num;align-self:baseline}
+  .thumbs .cap{grid-area:cap;font-size:var(--t-m);line-height:1.4}
+  .thumbs img{filter:none}
+}
 </style>
 </head>
 <body>
@@ -275,14 +294,15 @@ div.box{cursor:default}
     </h1>
     <p class="welcome-lead">Ich entwerfe für Orte, die aus der Zeit gefallen sind.</p>
     <ol class="thumbs" aria-label="Projekte">
-      <li><a href="#am-rand-der-zeit"><span class="label">(01)</span><span class="th"><img src="img/r-axo.jpg" alt=""></span><span class="cap">Am Rand der Zeit.<br>Masterthesis</span></a></li>
-      <li><a href="#agri-culture"><span class="label">(02)</span><span class="th"><img src="img/a-skizze.jpg" alt=""></span><span class="cap">Agri+Culture.<br>Städtebau</span></a></li>
-      <li><a href="#stadtkind"><span class="label">(03)</span><span class="th"><img src="img/s-hero.jpg" alt=""></span><span class="cap">Stadtkind.<br>Freiluftschule</span></a></li>
-      <li><a href="#boett-block"><span class="label">(04)</span><span class="th"><img src="img/b-v-laubengang.jpg" alt=""></span><span class="cap">Bött Care* Block.<br>Wohnen</span></a></li>
-      <li><a href="#light-shell"><span class="label">(05)</span><span class="th"><img src="img/h-d5.jpg" alt=""></span><span class="cap">Light Shell.<br>Tanzhaus</span></a></li>
-      <li><a href="#wolke-7"><span class="label">(06)</span><span class="th"><img src="img/w-tg.jpg" alt=""></span><span class="cap">Wolke 7.<br>Bachelorthesis</span></a></li>
-      <li><a href="#koenigs-grill"><span class="label">(07)</span><span class="th"><img src="img/k-illu.jpg" alt=""></span><span class="cap">Königs Grill 2.<br>Innenraum &amp; Marketing</span></a></li>
+      <li><a href="#am-rand-der-zeit"><span class="label">(01)</span><span class="th"><img src="img/r-axo.jpg" alt=""></span><span class="cap"><b>Am Rand der Zeit.</b><br>Masterthesis</span></a></li>
+      <li><a href="#agri-culture"><span class="label">(02)</span><span class="th"><img src="img/a-skizze.jpg" alt=""></span><span class="cap"><b>Agri+Culture.</b><br>Städtebau</span></a></li>
+      <li><a href="#stadtkind"><span class="label">(03)</span><span class="th"><img src="img/s-hero.jpg" alt=""></span><span class="cap"><b>Stadtkind.</b><br>Freiluftschule</span></a></li>
+      <li><a href="#boett-block"><span class="label">(04)</span><span class="th"><img src="img/b-v-laubengang.jpg" alt=""></span><span class="cap"><b>Bött Care* Block.</b><br>Wohnen</span></a></li>
+      <li><a href="#light-shell"><span class="label">(05)</span><span class="th"><img src="img/h-d5.jpg" alt=""></span><span class="cap"><b>Light Shell.</b><br>Tanzhaus</span></a></li>
+      <li><a href="#wolke-7"><span class="label">(06)</span><span class="th"><img src="img/w-tg.jpg" alt=""></span><span class="cap"><b>Wolke 7.</b><br>Bachelorthesis</span></a></li>
+      <li><a href="#koenigs-grill"><span class="label">(07)</span><span class="th"><img src="img/k-illu.jpg" alt=""></span><span class="cap"><b>Königs Grill 2.</b><br>Innenraum &amp; Marketing</span></a></li>
     </ol>
+    <p class="all-works"><a href="#arbeiten">Alle Arbeiten ansehen →</a></p>
     <div class="statements">
       <p>Bestand ist <em>Zukunft.</em></p>
       <p>Räume entstehen durch <em>Begegnung.</em></p>
