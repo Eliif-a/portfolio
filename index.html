@@ -294,40 +294,42 @@ div.box{cursor:default}
 @keyframes limbChildArm{0%,30%,100%{transform:rotate(0)}55%,75%{transform:rotate(-28deg)}}
 @media (prefers-reduced-motion: reduce){.box.sil-stage .p{animation:none!important}}
 /* Light Shell section: the bunker has no windows, the light columns bring daylight from above.
-   Spotlights fixed to the columns shine from them into every floor; subtle, cool light that breathes */
+   Spotlights fixed to the columns send narrow, soft beams into every floor, each at its own angle */
 .box.sil-stage .floorlight{position:absolute;left:21.4%;width:57.2%;overflow:hidden;pointer-events:none;mix-blend-mode:multiply}
-.box.sil-stage .cone{position:absolute;inset:0;opacity:.6;animation:coneGlow 6.5s ease-in-out infinite}
+.box.sil-stage .cone{position:absolute;inset:0;opacity:.3;animation:coneGlow 7s ease-in-out infinite}
 .box.sil-stage .fl-og4{top:6.00%;height:13.70%}
+.box.sil-stage .fl-og4 .c0{clip-path:polygon(31.99% 15.97%,31.99% 20.03%,-111.87% 823.65%,-68.01% 1022.39%);background:radial-gradient(circle at 31.99% 18.00%,rgba(196,214,255,.8),rgba(196,214,255,.3) 138px,rgba(196,214,255,0) 295px);animation-delay:-1.9s}
+.box.sil-stage .fl-og4 .c1{clip-path:polygon(39.60% 37.97%,39.60% 42.03%,217.80% 566.53%,185.87% 830.96%);background:radial-gradient(circle at 39.60% 40.00%,rgba(196,214,255,.8),rgba(196,214,255,.3) 138px,rgba(196,214,255,0) 295px);animation-delay:-0.9s}
+.box.sil-stage .fl-og4 .c2{clip-path:polygon(61.63% 19.97%,61.63% 24.03%,-61.51% 935.91%,-13.30% 1097.32%);background:radial-gradient(circle at 61.63% 22.00%,rgba(255,208,230,.8),rgba(255,208,230,.3) 138px,rgba(255,208,230,0) 295px);animation-delay:-3.9s}
+.box.sil-stage .fl-og4 .c3{clip-path:polygon(67.74% 52.97%,67.74% 57.03%,233.55% 703.54%,196.30% 943.44%);background:radial-gradient(circle at 67.74% 55.00%,rgba(255,208,230,.8),rgba(255,208,230,.3) 138px,rgba(255,208,230,0) 295px);animation-delay:-0.4s}
 .box.sil-stage .fl-og3{top:22.60%;height:13.80%}
+.box.sil-stage .fl-og3 .c0{clip-path:polygon(31.99% 42.99%,31.99% 47.01%,-141.21% 620.68%,-106.94% 873.23%);background:radial-gradient(circle at 31.99% 45.00%,rgba(196,214,255,.8),rgba(196,214,255,.3) 139px,rgba(196,214,255,0) 298px);animation-delay:-3.2s}
+.box.sil-stage .fl-og3 .c1{clip-path:polygon(39.60% 12.99%,39.60% 17.01%,157.15% 946.48%,108.00% 1096.93%);background:radial-gradient(circle at 39.60% 15.00%,rgba(196,214,255,.8),rgba(196,214,255,.3) 139px,rgba(196,214,255,0) 298px);animation-delay:-2.2s}
+.box.sil-stage .fl-og3 .c2{clip-path:polygon(67.74% 17.99%,67.74% 22.01%,216.37% 790.42%,173.73% 996.42%);background:radial-gradient(circle at 67.74% 20.00%,rgba(255,208,230,.8),rgba(255,208,230,.3) 139px,rgba(255,208,230,0) 298px);animation-delay:-0.3s}
+.box.sil-stage .fl-og3 .c3{clip-path:polygon(61.63% 47.99%,61.63% 52.01%,-123.81% 481.31%,-95.98% 758.85%);background:radial-gradient(circle at 61.63% 50.00%,rgba(255,208,230,.8),rgba(255,208,230,.3) 139px,rgba(255,208,230,0) 298px);animation-delay:-3.0s}
 .box.sil-stage .fl-og2{top:39.20%;height:13.90%}
+.box.sil-stage .fl-og2 .c0{clip-path:polygon(39.60% 28.00%,39.60% 32.00%,199.33% 717.93%,159.96% 942.91%);background:radial-gradient(circle at 39.60% 30.00%,rgba(196,214,255,.8),rgba(196,214,255,.3) 140px,rgba(196,214,255,0) 300px);animation-delay:-0.2s}
+.box.sil-stage .fl-og2 .c1{clip-path:polygon(61.63% 10.00%,61.63% 14.00%,-44.36% 981.39%,6.50% 1110.80%);background:radial-gradient(circle at 61.63% 12.00%,rgba(255,208,230,.8),rgba(255,208,230,.3) 140px,rgba(255,208,230,0) 300px);animation-delay:-2.6s}
+.box.sil-stage .fl-og2 .c2{clip-path:polygon(67.74% 36.00%,67.74% 40.00%,250.45% 502.93%,220.95% 772.76%);background:radial-gradient(circle at 67.74% 38.00%,rgba(255,208,230,.8),rgba(255,208,230,.3) 140px,rgba(255,208,230,0) 300px);animation-delay:-0.4s}
+.box.sil-stage .fl-og2 .c3{clip-path:polygon(31.99% 23.00%,31.99% 27.00%,-99.22% 887.70%,-52.53% 1060.99%);background:radial-gradient(circle at 31.99% 25.00%,rgba(196,214,255,.8),rgba(196,214,255,.3) 140px,rgba(196,214,255,0) 300px);animation-delay:-0.5s}
 .box.sil-stage .fl-og1{top:56.00%;height:13.90%}
+.box.sil-stage .fl-og1 .c0{clip-path:polygon(31.99% 10.00%,31.99% 14.00%,-79.85% 959.66%,-29.81% 1099.14%);background:radial-gradient(circle at 31.99% 12.00%,rgba(196,214,255,.8),rgba(196,214,255,.3) 140px,rgba(196,214,255,0) 300px);animation-delay:-2.5s}
+.box.sil-stage .fl-og1 .c1{clip-path:polygon(67.74% 28.00%,67.74% 32.00%,204.14% 866.00%,158.54% 1048.50%);background:radial-gradient(circle at 67.74% 30.00%,rgba(255,208,230,.8),rgba(255,208,230,.3) 140px,rgba(255,208,230,0) 300px);animation-delay:-5.0s}
+.box.sil-stage .fl-og1 .c2{clip-path:polygon(39.60% 46.00%,39.60% 50.00%,222.31% 512.93%,192.81% 782.76%);background:radial-gradient(circle at 39.60% 48.00%,rgba(196,214,255,.8),rgba(196,214,255,.3) 140px,rgba(196,214,255,0) 300px);animation-delay:-0.7s}
+.box.sil-stage .fl-og1 .c3{clip-path:polygon(61.63% 26.00%,61.63% 30.00%,-100.18% 699.89%,-61.51% 928.76%);background:radial-gradient(circle at 61.63% 28.00%,rgba(255,208,230,.8),rgba(255,208,230,.3) 140px,rgba(255,208,230,0) 300px);animation-delay:-1.3s}
 .box.sil-stage .fl-eg{top:72.60%;height:17.70%}
-.box.sil-stage .cone-al{clip-path:polygon(32.0% 6%,32.0% 20%,3.7% 100%,26.4% 100%);background:radial-gradient(ellipse 60% 120% at 32.0% 10%,rgba(188,210,255,.85),rgba(188,210,255,.35) 45%,rgba(188,210,255,0) 85%)}
-.box.sil-stage .cone-ar{clip-path:polygon(39.6% 6%,39.6% 20%,60.5% 100%,44.8% 100%);background:radial-gradient(ellipse 60% 120% at 39.6% 10%,rgba(188,210,255,.85),rgba(188,210,255,.35) 45%,rgba(188,210,255,0) 85%)}
-.box.sil-stage .cone-cl{clip-path:polygon(61.6% 6%,61.6% 20%,41.3% 100%,55.2% 100%);background:radial-gradient(ellipse 60% 120% at 61.6% 10%,rgba(255,202,226,.85),rgba(255,202,226,.35) 45%,rgba(255,202,226,0) 85%)}
-.box.sil-stage .cone-cr{clip-path:polygon(67.7% 6%,67.7% 20%,96.3% 100%,72.7% 100%);background:radial-gradient(ellipse 60% 120% at 67.7% 10%,rgba(255,202,226,.85),rgba(255,202,226,.35) 45%,rgba(255,202,226,0) 85%)}
-.box.sil-stage .fl-og4 .cone-al{animation-delay:-0.0s}
-.box.sil-stage .fl-og4 .cone-ar{animation-delay:-0.9s}
-.box.sil-stage .fl-og4 .cone-cl{animation-delay:-1.8s}
-.box.sil-stage .fl-og4 .cone-cr{animation-delay:-2.7s}
-.box.sil-stage .fl-og3 .cone-al{animation-delay:-1.3s}
-.box.sil-stage .fl-og3 .cone-ar{animation-delay:-2.2s}
-.box.sil-stage .fl-og3 .cone-cl{animation-delay:-3.1s}
-.box.sil-stage .fl-og3 .cone-cr{animation-delay:-4.0s}
-.box.sil-stage .fl-og2 .cone-al{animation-delay:-2.6s}
-.box.sil-stage .fl-og2 .cone-ar{animation-delay:-3.5s}
-.box.sil-stage .fl-og2 .cone-cl{animation-delay:-4.4s}
-.box.sil-stage .fl-og2 .cone-cr{animation-delay:-5.3s}
-.box.sil-stage .fl-og1 .cone-al{animation-delay:-3.9s}
-.box.sil-stage .fl-og1 .cone-ar{animation-delay:-4.8s}
-.box.sil-stage .fl-og1 .cone-cl{animation-delay:-5.7s}
-.box.sil-stage .fl-og1 .cone-cr{animation-delay:-6.6s}
-.box.sil-stage .fl-eg .cone-al{animation-delay:-5.2s}
-.box.sil-stage .fl-eg .cone-ar{animation-delay:-6.1s}
-.box.sil-stage .fl-eg .cone-cl{animation-delay:-7.0s}
-.box.sil-stage .fl-eg .cone-cr{animation-delay:-7.9s}
-@keyframes coneGlow{0%,100%{opacity:.32}30%{opacity:.55}55%{opacity:.4}80%{opacity:.6}}
-@media (prefers-reduced-motion: reduce){.box.sil-stage .cone{animation:none!important}}
+.box.sil-stage .fl-eg .c0{clip-path:polygon(67.74% 13.43%,67.74% 16.57%,190.88% 722.38%,142.67% 847.31%);background:radial-gradient(circle at 67.74% 15.00%,rgba(255,208,230,.8),rgba(255,208,230,.3) 178px,rgba(255,208,230,0) 382px);animation-delay:-3.8s}
+.box.sil-stage .fl-eg .c1{clip-path:polygon(31.99% 33.43%,31.99% 36.57%,-137.62% 510.70%,-101.83% 702.10%);background:radial-gradient(circle at 31.99% 35.00%,rgba(196,214,255,.8),rgba(196,214,255,.3) 178px,rgba(196,214,255,0) 382px);animation-delay:-5.7s}
+.box.sil-stage .fl-eg .c2{clip-path:polygon(61.63% 40.43%,61.63% 43.57%,-87.00% 642.66%,-44.36% 803.27%);background:radial-gradient(circle at 61.63% 42.00%,rgba(255,208,230,.8),rgba(255,208,230,.3) 178px,rgba(255,208,230,0) 382px);animation-delay:-3.5s}
+.box.sil-stage .fl-eg .c3{clip-path:polygon(39.60% 18.43%,39.60% 21.57%,178.53% 665.74%,133.49% 812.60%);background:radial-gradient(circle at 39.60% 20.00%,rgba(196,214,255,.8),rgba(196,214,255,.3) 178px,rgba(196,214,255,0) 382px);animation-delay:-2.4s}
+.box.sil-stage .colglow{position:absolute;top:3.8%;height:86.5%;pointer-events:none;mix-blend-mode:multiply;
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 25%,#000 75%,transparent);mask-image:linear-gradient(to right,transparent,#000 25%,#000 75%,transparent);animation:colGlow 8s ease-in-out infinite}
+.box.sil-stage .cg-a{left:39.2%;width:5.4%;background:linear-gradient(to bottom,rgba(196,214,255,.75),rgba(196,214,255,.35) 45%,rgba(196,214,255,.18))}
+.box.sil-stage .cg-b{left:50.8%;width:4.8%;background:linear-gradient(to bottom,rgba(220,214,255,.5),rgba(220,214,255,.18) 50%,rgba(220,214,255,.08));animation-delay:-3s}
+.box.sil-stage .cg-c{left:56.1%;width:4.6%;background:linear-gradient(to bottom,rgba(255,208,230,.75),rgba(255,208,230,.35) 45%,rgba(255,208,230,.18));animation-delay:-5s}
+@keyframes colGlow{0%,100%{opacity:.22}50%{opacity:.36}}
+@keyframes coneGlow{0%,100%{opacity:.32}35%{opacity:.5}60%{opacity:.38}85%{opacity:.52}}
+@media (prefers-reduced-motion: reduce){.box.sil-stage .cone,.box.sil-stage .colglow{animation:none!important}}
 /* Am Rand der Zeit: the yellow parts are pulled out of the isometry */
 .box.ruin-stage{position:relative;overflow:hidden}
 .box.ruin-stage img.rp{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:contain;pointer-events:none;
@@ -772,7 +774,7 @@ figure.lift figcaption{margin-top:-26%;position:relative}
     </div>
     <div class="rows">
       <div class="row">
-        <figure><div class="box free sil-stage" data-cap="Längsschnitt · Tanzsäle, Café und Bar im neuen Kern, eingestellt in die Hülle des Bunkers"><img src="img/h-schnitt-leer.jpg?v=f41c2d12" alt="Längsschnitt" loading="lazy"><span class="floorlight fl-og4" aria-hidden="true"><span class="cone cone-al"></span><span class="cone cone-ar"></span><span class="cone cone-cl"></span><span class="cone cone-cr"></span></span><span class="floorlight fl-og3" aria-hidden="true"><span class="cone cone-al"></span><span class="cone cone-ar"></span><span class="cone cone-cl"></span><span class="cone cone-cr"></span></span><span class="floorlight fl-og2" aria-hidden="true"><span class="cone cone-al"></span><span class="cone cone-ar"></span><span class="cone cone-cl"></span><span class="cone cone-cr"></span></span><span class="floorlight fl-og1" aria-hidden="true"><span class="cone cone-al"></span><span class="cone cone-ar"></span><span class="cone cone-cl"></span><span class="cone cone-cr"></span></span><span class="floorlight fl-eg" aria-hidden="true"><span class="cone cone-al"></span><span class="cone cone-ar"></span><span class="cone cone-cl"></span><span class="cone cone-cr"></span></span><span class="fig fig-break" aria-hidden="true"><img src="img/h-sil-break-body.png?v=32d87f29" alt=""><img class="p p-break-leg" src="img/h-sil-break-leg.png?v=d551a666" alt=""></span><span class="fig fig-ballet" aria-hidden="true"><img src="img/h-sil-ballet-body.png?v=9b40db79" alt=""><img class="p p-ballet-armL" src="img/h-sil-ballet-armL.png?v=58c518ba" alt=""><img class="p p-ballet-armR" src="img/h-sil-ballet-armR.png?v=067d2131" alt=""><img class="p p-ballet-leg" src="img/h-sil-ballet-leg.png?v=a848dbcc" alt=""></span><span class="fig fig-walk" aria-hidden="true"><img src="img/h-sil-walk-body.png?v=c0c81ab7" alt=""><img class="p p-walk-arm" src="img/h-sil-walk-arm.png?v=28df0b01" alt=""></span></div><figcaption><b>Längsschnitt</b> Tanzsäle, Café und Bar im neuen Kern</figcaption></figure>
+        <figure><div class="box free sil-stage" data-cap="Längsschnitt · Tanzsäle, Café und Bar im neuen Kern, eingestellt in die Hülle des Bunkers"><img src="img/h-schnitt-leer.jpg?v=f41c2d12" alt="Längsschnitt" loading="lazy"><span class="colglow cg-a" aria-hidden="true"></span><span class="colglow cg-b" aria-hidden="true"></span><span class="colglow cg-c" aria-hidden="true"></span><span class="floorlight fl-og4" aria-hidden="true"><span class="cone c0"></span><span class="cone c1"></span><span class="cone c2"></span><span class="cone c3"></span></span><span class="floorlight fl-og3" aria-hidden="true"><span class="cone c0"></span><span class="cone c1"></span><span class="cone c2"></span><span class="cone c3"></span></span><span class="floorlight fl-og2" aria-hidden="true"><span class="cone c0"></span><span class="cone c1"></span><span class="cone c2"></span><span class="cone c3"></span></span><span class="floorlight fl-og1" aria-hidden="true"><span class="cone c0"></span><span class="cone c1"></span><span class="cone c2"></span><span class="cone c3"></span></span><span class="floorlight fl-eg" aria-hidden="true"><span class="cone c0"></span><span class="cone c1"></span><span class="cone c2"></span><span class="cone c3"></span></span><span class="fig fig-break" aria-hidden="true"><img src="img/h-sil-break-body.png?v=32d87f29" alt=""><img class="p p-break-leg" src="img/h-sil-break-leg.png?v=d551a666" alt=""></span><span class="fig fig-ballet" aria-hidden="true"><img src="img/h-sil-ballet-body.png?v=9b40db79" alt=""><img class="p p-ballet-armL" src="img/h-sil-ballet-armL.png?v=58c518ba" alt=""><img class="p p-ballet-armR" src="img/h-sil-ballet-armR.png?v=067d2131" alt=""><img class="p p-ballet-leg" src="img/h-sil-ballet-leg.png?v=a848dbcc" alt=""></span><span class="fig fig-walk" aria-hidden="true"><img src="img/h-sil-walk-body.png?v=c0c81ab7" alt=""><img class="p p-walk-arm" src="img/h-sil-walk-arm.png?v=28df0b01" alt=""></span></div><figcaption><b>Längsschnitt</b> Tanzsäle, Café und Bar im neuen Kern</figcaption></figure>
       </div>
       <p class="label mark section-label" style="display:grid;justify-items:center">Details</p>
       <div class="row just"><figure style="--ar:2.3622"><div class="box" data-cap="Detail 01"><img src="img/h-d1.jpg?v=72c25c7c" alt="Detail 01" loading="lazy"></div><figcaption><b>Detail 01</b> </figcaption></figure><figure style="--ar:2.1429"><div class="box" data-cap="Detail 02"><img src="img/h-d2.jpg?v=c4936037" alt="Detail 02" loading="lazy"></div><figcaption><b>Detail 02</b> </figcaption></figure></div>
