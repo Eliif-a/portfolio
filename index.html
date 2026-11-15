@@ -274,17 +274,25 @@ div.box{cursor:default}
 .w7seq-row{max-width:min(100%,480px)}
 /* Light Shell section: dancing and walking silhouettes */
 .sil-stage{position:relative}
-.sil-stage:not(.ready) .sil,.sil-stage:not(.ready) .sil-walker{visibility:hidden}
-.box.sil-stage img.sil{position:absolute;display:block;height:auto;pointer-events:none;object-fit:fill}
-.box.sil-stage img.sil-break{left:48.9%;top:29.444%;width:2.7%;transform-origin:50% 100%;animation:silFreeze 1.6s ease-in-out infinite}
-.box.sil-stage img.sil-ballet{left:44.7%;top:62.917%;width:5.3%;transform-origin:45% 100%;animation:silPirouette 2.6s ease-in-out infinite}
-.box.sil-stage .sil-walker{position:absolute;left:49.95%;top:83.542%;width:3.4%;animation:silWalk 18s linear infinite}
-.box.sil-stage .sil-walker img.sil{position:static;width:100%;animation:silBob .55s ease-in-out infinite alternate}
-@keyframes silFreeze{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg) translateY(-4%)}}
-@keyframes silPirouette{0%,100%{transform:scaleX(1)}25%{transform:scaleX(.12)}50%{transform:scaleX(-1)}75%{transform:scaleX(.12)}}
-@keyframes silWalk{0%{left:49.95%;transform:scaleX(1)}36%{left:74%;transform:scaleX(1)}38%{left:74%;transform:scaleX(-1)}86%{left:22%;transform:scaleX(-1)}88%{left:22%;transform:scaleX(1)}100%{left:49.95%;transform:scaleX(1)}}
-@keyframes silBob{from{transform:translateY(0)}to{transform:translateY(-3%)}}
-@media (prefers-reduced-motion: reduce){.box.sil-stage img.sil,.box.sil-stage .sil-walker{animation:none!important}}
+.sil-stage:not(.ready) .fig{visibility:hidden}
+.box.sil-stage .fig{position:absolute;display:block;pointer-events:none}
+.box.sil-stage .fig img{position:absolute;left:0;top:0;width:100%;height:auto;display:block;object-fit:fill}
+.box.sil-stage .fig img:first-child{position:relative}
+.box.sil-stage .fig-break{left:48.9%;top:29.444%;width:2.7%}
+.box.sil-stage .fig-ballet{left:44.7%;top:62.917%;width:5.3%}
+.box.sil-stage .fig-walk{left:49.95%;top:83.542%;width:3.4%}
+/* subtle: figures stay, only limbs move */
+.box.sil-stage .p-break-leg{transform-origin:48.1% 35.3%;animation:limbBreakLeg 3.2s ease-in-out infinite}
+.box.sil-stage .p-ballet-armL{transform-origin:29.2% 19%;animation:limbArmL 4s ease-in-out infinite}
+.box.sil-stage .p-ballet-armR{transform-origin:44.3% 19%;animation:limbArmR 4s ease-in-out infinite}
+.box.sil-stage .p-ballet-leg{transform-origin:47.2% 35%;animation:limbLegUp 4s ease-in-out infinite}
+.box.sil-stage .p-walk-arm{transform-origin:80.9% 69.7%;animation:limbChildArm 5s ease-in-out infinite}
+@keyframes limbBreakLeg{0%,100%{transform:rotate(0)}50%{transform:rotate(-7deg)}}
+@keyframes limbArmL{0%,15%,100%{transform:rotate(0)}50%,65%{transform:rotate(9deg)}}
+@keyframes limbArmR{0%,15%,100%{transform:rotate(0)}50%,65%{transform:rotate(-9deg)}}
+@keyframes limbLegUp{0%,15%,100%{transform:rotate(0)}50%,65%{transform:rotate(-7deg)}}
+@keyframes limbChildArm{0%,30%,100%{transform:rotate(0)}55%,75%{transform:rotate(-28deg)}}
+@media (prefers-reduced-motion: reduce){.box.sil-stage .p{animation:none!important}}
 </style>
 </head>
 <body>
@@ -624,7 +632,7 @@ div.box{cursor:default}
     </div>
     <div class="rows">
       <div class="row">
-        <figure><div class="box free sil-stage" data-cap="Längsschnitt · Tanzsäle, Café und Bar im neuen Kern, eingestellt in die Hülle des Bunkers"><img src="img/h-schnitt-leer.jpg" alt="Längsschnitt" loading="lazy"><img class="sil sil-break" src="img/h-sil-break.png" alt="" aria-hidden="true"><img class="sil sil-ballet" src="img/h-sil-ballet.png" alt="" aria-hidden="true"><span class="sil-walker" aria-hidden="true"><img class="sil sil-walk" src="img/h-sil-walk.png" alt=""></span></div><figcaption><b>Längsschnitt</b> Tanzsäle, Café und Bar im neuen Kern</figcaption></figure>
+        <figure><div class="box free sil-stage" data-cap="Längsschnitt · Tanzsäle, Café und Bar im neuen Kern, eingestellt in die Hülle des Bunkers"><img src="img/h-schnitt-leer.jpg" alt="Längsschnitt" loading="lazy"><span class="fig fig-break" aria-hidden="true"><img src="img/h-sil-break-body.png" alt=""><img class="p p-break-leg" src="img/h-sil-break-leg.png" alt=""></span><span class="fig fig-ballet" aria-hidden="true"><img src="img/h-sil-ballet-body.png" alt=""><img class="p p-ballet-armL" src="img/h-sil-ballet-armL.png" alt=""><img class="p p-ballet-armR" src="img/h-sil-ballet-armR.png" alt=""><img class="p p-ballet-leg" src="img/h-sil-ballet-leg.png" alt=""></span><span class="fig fig-walk" aria-hidden="true"><img src="img/h-sil-walk-body.png" alt=""><img class="p p-walk-arm" src="img/h-sil-walk-arm.png" alt=""></span></div><figcaption><b>Längsschnitt</b> Tanzsäle, Café und Bar im neuen Kern</figcaption></figure>
       </div>
       <p class="label mark section-label" style="display:grid;justify-items:center">Details</p>
       <div class="row just"><figure style="--ar:2.3622"><div class="box" data-cap="Detail 01"><img src="img/h-d1.jpg" alt="Detail 01" loading="lazy"></div><figcaption><b>Detail 01</b> </figcaption></figure><figure style="--ar:2.1429"><div class="box" data-cap="Detail 02"><img src="img/h-d2.jpg" alt="Detail 02" loading="lazy"></div><figcaption><b>Detail 02</b> </figcaption></figure></div>
