@@ -293,6 +293,18 @@ div.box{cursor:default}
 @keyframes limbLegUp{0%,15%,100%{transform:rotate(0)}50%,65%{transform:rotate(-7deg)}}
 @keyframes limbChildArm{0%,30%,100%{transform:rotate(0)}55%,75%{transform:rotate(-28deg)}}
 @media (prefers-reduced-motion: reduce){.box.sil-stage .p{animation:none!important}}
+/* Am Rand der Zeit: the yellow parts are pulled out of the isometry */
+.box.ruin-stage{position:relative}
+.box.ruin-stage img.rp{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:contain;pointer-events:none;
+  animation:ruinOut 9s cubic-bezier(.45,0,.2,1) infinite both;animation-delay:calc(var(--n)*.35s)}
+.box.ruin-stage .rp1{--n:0;--dx:0%;--dy:10.8%}
+.box.ruin-stage .rp2{--n:1;--dx:-8.6%;--dy:-5.4%}
+.box.ruin-stage .rp3{--n:2;--dx:0%;--dy:-8.1%}
+.box.ruin-stage .rp4{--n:3;--dx:4.3%;--dy:-3%}
+.box.ruin-stage .rp5{--n:4;--dx:9.3%;--dy:6.3%}
+.box.ruin-stage .rp6{--n:5;--dx:0%;--dy:5.4%}
+@keyframes ruinOut{0%,8%{transform:translate(var(--dx),var(--dy))}40%,80%{transform:translate(0,0)}100%{transform:translate(var(--dx),var(--dy))}}
+@media (prefers-reduced-motion: reduce){.box.ruin-stage img.rp{animation:none!important}}
 </style>
 </head>
 <body>
@@ -400,7 +412,7 @@ div.box{cursor:default}
       </div>
       <div class="row just">
         <figure style="--ar:1.8109"><button class="box" type="button" data-cap="Ruine · das Gerüst bleibt stehen, die Natur zieht ein"><img src="img/r-ruine.jpg" alt="Isometrie der Ruine" loading="lazy"></button><figcaption><b>Ruine</b> das Gerüst bleibt stehen</figcaption></figure>
-        <figure style="--ar:1.2570"><button class="box" type="button" data-cap="Ruinieren · Freilegen des Tragwerks in sechs Schritten"><img src="img/r-ruinieren.jpg" alt="Freilegen des Tragwerks" loading="lazy"></button><figcaption><b>Ruinieren</b> Tragwerk in sechs Schritten</figcaption></figure>
+        <figure style="--ar:1.2570"><button class="box ruin-stage" type="button" data-full="img/r-ruinieren.jpg" data-cap="Ruinieren · Freilegen des Tragwerks in sechs Schritten"><img src="img/r-ruinieren-base.jpg" alt="Freilegen des Tragwerks" loading="lazy"><img class="rp rp1" src="img/r-ruin-p1.png" alt="" loading="lazy"><img class="rp rp2" src="img/r-ruin-p2.png" alt="" loading="lazy"><img class="rp rp3" src="img/r-ruin-p3.png" alt="" loading="lazy"><img class="rp rp4" src="img/r-ruin-p4.png" alt="" loading="lazy"><img class="rp rp5" src="img/r-ruin-p5.png" alt="" loading="lazy"><img class="rp rp6" src="img/r-ruin-p6.png" alt="" loading="lazy"></button><figcaption><b>Ruinieren</b> Tragwerk in sechs Schritten</figcaption></figure>
       </div>
       <div class="row">
         <figure><button class="box" type="button" data-cap="Axonometrie · Park, Halle und Pavillon"><img src="img/r-axo.jpg" alt="Axonometrie von Park, Halle und Pavillon" loading="lazy"></button><figcaption><b>Axonometrie</b> Park, Halle und Pavillon</figcaption></figure>
@@ -832,7 +844,7 @@ div.box{cursor:default}
   document.querySelectorAll('button.box').forEach(function(b){
     b.addEventListener('click',function(){
       var i=b.querySelector('img');
-      img.src=i.currentSrc||i.src;img.alt=i.alt;cap.textContent=b.dataset.cap||i.alt;
+      img.src=b.dataset.full||i.currentSrc||i.src;img.alt=i.alt;cap.textContent=b.dataset.cap||i.alt;
       if(lb.showModal)lb.showModal();
     });
   });
