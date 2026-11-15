@@ -294,7 +294,7 @@ div.box{cursor:default}
 @keyframes limbChildArm{0%,30%,100%{transform:rotate(0)}55%,75%{transform:rotate(-28deg)}}
 @media (prefers-reduced-motion: reduce){.box.sil-stage .p{animation:none!important}}
 /* Am Rand der Zeit: the yellow parts are pulled out of the isometry */
-.box.ruin-stage{position:relative}
+.box.ruin-stage{position:relative;overflow:hidden}
 .box.ruin-stage img.rp{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:contain;pointer-events:none;
   animation:ruinOut 9s cubic-bezier(.45,0,.2,1) infinite both;animation-delay:calc(var(--n)*.35s)}
 .box.ruin-stage .rp1{--n:0;--dx:0%;--dy:10.8%}
@@ -324,6 +324,17 @@ div.box{cursor:default}
 @keyframes armUpL{from{transform:rotate(0)}to{transform:rotate(4deg)}}
 @keyframes armUpR{from{transform:rotate(0)}to{transform:rotate(-4deg)}}
 @media (prefers-reduced-motion: reduce){.box.arm-stage img.arm{animation:none!important}}
+/* Stadtkind section: a child hops, a girl waves, hanging plants sway */
+.box.sk-stage{position:relative;overflow:hidden}
+.box.sk-stage img.sk{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none}
+.box.sk-stage .sk-kid{transform-origin:40.886% 70.5%;animation:skHop 2.8s ease-in-out infinite}
+.box.sk-stage .sk-wave{transform-origin:65.773% 43.018%;animation:skWave 3.4s ease-in-out infinite}
+.box.sk-stage .sk-plA{transform-origin:37.955% 54.414%;animation:skSway 5s ease-in-out infinite alternate}
+.box.sk-stage .sk-plB{transform-origin:77.045% 29.374%;animation:skSway 5.8s ease-in-out infinite alternate;animation-delay:-2s}
+@keyframes skHop{0%,55%,100%{transform:translateY(0) rotate(0)}75%{transform:translateY(-.7%) rotate(-2deg)}}
+@keyframes skWave{0%,40%,100%{transform:rotate(0)}55%{transform:rotate(-12deg)}70%{transform:rotate(4deg)}85%{transform:rotate(-10deg)}}
+@keyframes skSway{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
+@media (prefers-reduced-motion: reduce){.box.sk-stage img.sk{animation:none!important}}
 </style>
 </head>
 <body>
@@ -581,7 +592,7 @@ div.box{cursor:default}
         <figure><div class="box free" data-cap="Grundriss OG · Lerncluster und Freiluftklassenzimmer"><img src="img/s-og.jpg" alt="Grundriss Obergeschoss" loading="lazy"></div><figcaption><b>Grundriss OG</b> Lerncluster, Freiluftklassen</figcaption></figure>
       </div>
       <div class="row">
-        <figure><div class="box free" data-cap="Längsschnitt · Lernflur unter dem Bogendach der Markthalle"><img src="img/s-schnitt.jpg" alt="Längsschnitt" loading="lazy"></div>
+        <figure><div class="box free sk-stage" data-cap="Längsschnitt · Lernflur unter dem Bogendach der Markthalle"><img src="img/s-schnitt-base.jpg" alt="Längsschnitt" loading="lazy"><img class="sk sk-plA" src="img/s-schnitt-plA.png" alt="" loading="lazy"><img class="sk sk-plB" src="img/s-schnitt-plB.png" alt="" loading="lazy"><img class="sk sk-kid" src="img/s-schnitt-kid.png" alt="" loading="lazy"><img class="sk sk-wave" src="img/s-schnitt-wave.png" alt="" loading="lazy"></div>
           <figcaption><b>Längsschnitt</b> Lernflur unter dem Bogendach der Markthalle</figcaption></figure>
       </div>
       <div class="row split">
