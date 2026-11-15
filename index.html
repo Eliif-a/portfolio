@@ -372,17 +372,19 @@ div.box{cursor:default}
 /* the arcade picture has white margin above: lift it so the drawing starts level with the facts */
 @media (min-width:861px){figure.lift{margin-top:-23.5%}}
 figure.lift figcaption{margin-top:-26%;position:relative}
-/* Bött isometry: speech bubbles grow one after another and stand out of the drawing; invisible at rest */
+/* Bött isometry: speech bubbles grow one after another out of the drawing. They are laid out at full size
+   and shrunk at rest, so the browser always draws them sharp; invisible at rest */
+#boett-block{overflow-x:clip}
 .box.bub-stage{position:relative}
-.box.bub-stage img.bub{position:absolute;height:auto;pointer-events:none;opacity:0;animation:bubPop 16.8s ease-in-out infinite both}
-.box.bub-stage img.bub.bub-luxus{left:53.405%;top:22.971%;width:17.081%;transform-origin:5.9% 98.0%;animation-delay:0.0s}
-.box.bub-stage img.bub.bub-generationen{left:35.208%;top:41.343%;width:17.802%;transform-origin:98.4% 93.3%;animation-delay:2.4s}
-.box.bub-stage img.bub.bub-schwimmen{left:30.885%;top:26.343%;width:13.154%;transform-origin:97.9% 88.4%;animation-delay:4.8s}
-.box.bub-stage img.bub.bub-entsiegelung{left:74.111%;top:41.486%;width:12.759%;transform-origin:2.7% 97.3%;animation-delay:7.2s}
-.box.bub-stage img.bub.bub-kultur{left:26.702%;top:34.714%;width:8.389%;transform-origin:97.0% 92.0%;animation-delay:9.6s}
-.box.bub-stage img.bub.bub-bestand{left:66.930%;top:36.286%;width:9.761%;transform-origin:2.4% 93.0%;animation-delay:12.0s}
-.box.bub-stage img.bub.bub-spiel{left:89.984%;top:55.971%;width:7.181%;transform-origin:3.2% 90.5%;animation-delay:14.4s}
-@keyframes bubPop{0%{opacity:0;transform:scale(1);z-index:1}1%{opacity:1;transform:scale(1);z-index:5}6%,11%{opacity:1;transform:scale(1.85);z-index:5}14.5%{opacity:1;transform:scale(1);z-index:5}15.0%,100%{opacity:0;transform:scale(1);z-index:1}}
+.box.bub-stage img.bub{position:absolute;height:auto;max-width:none;pointer-events:none;opacity:0;transform:scale(0.4167);animation:bubPop 16.8s ease-in-out infinite both}
+.box.bub-stage img.bub.bub-luxus{left:39.230%;top:13.778%;width:40.995%;transform-origin:59.3% 32.8%;animation-delay:0.0s}
+.box.bub-stage img.bub.bub-generationen{left:26.409%;top:31.383%;width:42.724%;transform-origin:35.3% 50.5%;animation-delay:2.4s}
+.box.bub-stage img.bub.bub-schwimmen{left:23.354%;top:20.235%;width:31.569%;transform-origin:40.9% 50.4%;animation-delay:4.8s}
+.box.bub-stage img.bub.bub-entsiegelung{left:63.957%;top:33.310%;width:30.620%;transform-origin:56.8% 39.8%;animation-delay:7.2s}
+.box.bub-stage img.bub.bub-kultur{left:22.307%;top:30.032%;width:20.135%;transform-origin:37.4% 49.2%;animation-delay:9.6s}
+.box.bub-stage img.bub.bub-bestand{left:58.484%;top:31.131%;width:23.426%;transform-origin:61.8% 47.6%;animation-delay:12.0s}
+.box.bub-stage img.bub.bub-spiel{left:83.807%;top:51.948%;width:17.234%;transform-origin:61.4% 50.3%;animation-delay:14.4s}
+@keyframes bubPop{0%{opacity:0;transform:scale(0.4167);z-index:1}1%{opacity:1;transform:scale(0.4167);z-index:5}6%,11%{opacity:1;transform:scale(1);z-index:5}14.5%{opacity:1;transform:scale(0.4167);z-index:5}15%,100%{opacity:0;transform:scale(0.4167);z-index:1}}
 @media (prefers-reduced-motion: reduce){.box.bub-stage img.bub{animation:none!important}}
 .care{animation:careLights 9s linear infinite}
 @keyframes careLights{0%,26%{color:#EFD554}33%,59%{color:#2A8EC5}66%,92%{color:#E73A5A}100%{color:#EFD554}}
@@ -683,7 +685,7 @@ figure.lift figcaption{margin-top:-26%;position:relative}
     </div>
     <div class="rows">
       <div class="row feature" style="max-width:min(100%,860px)">
-        <figure><div class="box free bub-stage" data-cap="Isometrie · Luxus für alle"><img src="img/b-v-iso-crop.jpg?v=c026ebed" alt="Isometrie" loading="lazy"><img class="bub bub-luxus" src="img/b-bub-luxus.png?v=22a57c4b" alt="" loading="lazy"><img class="bub bub-generationen" src="img/b-bub-generationen.png?v=8a8e4785" alt="" loading="lazy"><img class="bub bub-schwimmen" src="img/b-bub-schwimmen.png?v=3123af9d" alt="" loading="lazy"><img class="bub bub-entsiegelung" src="img/b-bub-entsiegelung.png?v=42ddd13e" alt="" loading="lazy"><img class="bub bub-kultur" src="img/b-bub-kultur.png?v=53386ff6" alt="" loading="lazy"><img class="bub bub-bestand" src="img/b-bub-bestand.png?v=71f8b9f7" alt="" loading="lazy"><img class="bub bub-spiel" src="img/b-bub-spiel.png?v=8a9cb3d6" alt="" loading="lazy"></div><figcaption><b>Isometrie</b> Luxus für alle</figcaption></figure>
+        <figure><div class="box free bub-stage" data-cap="Isometrie · Luxus für alle"><img src="img/b-v-iso-crop.jpg?v=c026ebed" alt="Isometrie" loading="lazy"><img class="bub bub-luxus" src="img/b-bub-luxus.png?v=1c1e9206" alt="" loading="lazy"><img class="bub bub-generationen" src="img/b-bub-generationen.png?v=eb50f8bc" alt="" loading="lazy"><img class="bub bub-schwimmen" src="img/b-bub-schwimmen.png?v=ab91dfa4" alt="" loading="lazy"><img class="bub bub-entsiegelung" src="img/b-bub-entsiegelung.png?v=f5cda1b4" alt="" loading="lazy"><img class="bub bub-kultur" src="img/b-bub-kultur.png?v=7bc540d2" alt="" loading="lazy"><img class="bub bub-bestand" src="img/b-bub-bestand.png?v=795c60ec" alt="" loading="lazy"><img class="bub bub-spiel" src="img/b-bub-spiel.png?v=e7b60c6a" alt="" loading="lazy"></div><figcaption><b>Isometrie</b> Luxus für alle</figcaption></figure>
       </div>
       <p class="label muted section-label">Weitere Pläne und Bilder</p>
       <div class="row just">
