@@ -356,6 +356,16 @@ div.box{cursor:default}
 .box.sk-stage .sk-plC{transform-origin:17.136% 72.392%;animation:skSwayPl 3.6s ease-in-out infinite alternate;animation-delay:-1s}
 @keyframes skDance{0%,100%{transform:rotate(-7deg) translateY(0)}25%{transform:rotate(0) translateY(-.8%)}50%{transform:rotate(7deg) translateY(0)}75%{transform:rotate(0) translateY(-.8%)}}
 @media (prefers-reduced-motion: reduce){.box.sk-stage .skg{animation:none!important}}
+/* Bött Care* Block: the cat moves, CARE takes the colours of the string lights */
+.box.cat-stage{position:relative;overflow:hidden}
+.box.cat-stage img.cat{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.box.cat-stage .cat-tail{transform-origin:81.46% 76%;animation:catTail 2.6s ease-in-out infinite}
+.box.cat-stage .cat-head{transform-origin:70.23% 73.22%;animation:catHead 7s ease-in-out infinite}
+@keyframes catTail{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(14deg)}}
+@keyframes catHead{0%,35%,100%{transform:rotate(0)}48%,62%{transform:rotate(-5deg)}75%,85%{transform:rotate(4deg)}}
+.care{animation:careLights 9s linear infinite}
+@keyframes careLights{0%,26%{color:#EFD554}33%,59%{color:#2A8EC5}66%,92%{color:#E73A5A}100%{color:#EFD554}}
+@media (prefers-reduced-motion: reduce){.box.cat-stage img.cat,.care{animation:none!important}}
 </style>
 </head>
 <body>
@@ -633,7 +643,7 @@ div.box{cursor:default}
   <div class="wrap">
     <header class="phead">
       <div><p class="num">04<sup>°</sup></p><p class="label mark" style="margin-top:21px">Work 04 / 07</p></div>
-      <div><h1>Bött Care* Block.</h1><p class="sub">Wie Generationen wohnen</p></div>
+      <div><h1>Bött <span class="care">Care</span>* Block.</h1><p class="sub">Wie Generationen wohnen</p></div>
     </header>
     <div class="gold rev">
       <div>
@@ -648,7 +658,7 @@ div.box{cursor:default}
           <p>Grüne Laubengänge, Gemeinschaftsräume und ein Schwimmbad auf dem Dach passen sich an die unterschiedlichen Lebensumstände der Bewohnenden an. Die Forderung des Entwurfs: Luxus für alle.</p>
         </div>
       </div>
-      <figure><div class="box tall cover" data-cap="Laubengang · grün, offen, gemeinsam"><img src="img/b-v-laubengang.jpg?v=22b9fbc3" alt="Laubengang" loading="lazy"></div><figcaption><b>Laubengang</b> grün, offen, gemeinsam</figcaption></figure>
+      <figure><div class="box tall cover cat-stage" data-cap="Laubengang · grün, offen, gemeinsam"><img src="img/b-v-laubengang-base.jpg?v=9d49fed3" alt="Laubengang" loading="lazy"><img class="cat cat-tail" src="img/b-cat-tail.png?v=eeadb702" alt="" loading="lazy"><img class="cat cat-head" src="img/b-cat-head.png?v=4e44a969" alt="" loading="lazy"></div><figcaption><b>Laubengang</b> grün, offen, gemeinsam</figcaption></figure>
     </div>
     <div class="rows">
       <div class="row feature">
