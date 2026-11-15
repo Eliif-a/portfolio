@@ -267,6 +267,11 @@ div.box{cursor:default}
   .thumbs .cap{grid-area:cap;font-size:var(--t-m);line-height:1.4}
   .thumbs img{filter:none}
 }
+/* Wolke 7: analysis photos in quick succession, each shown whole */
+.w7seq-box{aspect-ratio:3/4;position:relative;background:#fff;cursor:default}
+.w7seq-box img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;visibility:hidden}
+.w7seq-box img.on{visibility:visible}
+.w7seq-row{max-width:min(100%,480px)}
 </style>
 </head>
 <body>
@@ -654,11 +659,9 @@ div.box{cursor:default}
       <figure><button class="box tall" type="button" data-cap="Vor Ort · der Entwurf zurück im Quartier"><img src="img/w-hero.jpg" alt="Staffelei mit Entwurfsbild vor einem Hochhaus" loading="lazy" style="object-fit:cover"></button><figcaption><b>Vor Ort</b> der Entwurf zurück im Quartier</figcaption></figure>
     </div>
     <div class="rows">
-      <div class="row quad">
-        <figure><button class="box tall cover" type="button" data-cap="Parkdeck · Kreide auf dem Asphalt"><img src="img/w-kreide.jpg" alt="Kreide auf dem Parkdeck" loading="lazy"></button><figcaption><b>Parkdeck</b></figcaption></figure>
-        <figure><button class="box tall cover" type="button" data-cap="Tiefgarage · ein Einkaufswagen"><img src="img/w-wagen.jpg" alt="Einkaufswagen in der Tiefgarage" loading="lazy"></button><figcaption><b>Tiefgarage</b></figcaption></figure>
-        <figure><button class="box tall cover" type="button" data-cap="Rot · Balkone"><img src="img/w-rot.jpg" alt="Rote Balkone" loading="lazy"></button><figcaption><b>Rot</b></figcaption></figure>
-        <figure><button class="box tall cover" type="button" data-cap="Graffiti · „für eine Welt, in die viele Welten passen“"><img src="img/w-graffiti.jpg" alt="Graffiti" loading="lazy"></button><figcaption><b>Graffiti</b></figcaption></figure>
+      <div class="row feature w7seq-row">
+        <figure class="w7seq"><div class="box w7seq-box" aria-label="Fotos aus der Analyse der Brüningheide, nacheinander"><img src="img/w7-01.jpg" alt="" loading="lazy" class="on"><img src="img/w7-02.jpg" alt="" loading="lazy"><img src="img/w7-03.jpg" alt="" loading="lazy"><img src="img/w7-04.jpg" alt="" loading="lazy"><img src="img/w7-05.jpg" alt="" loading="lazy"><img src="img/w7-06.jpg" alt="" loading="lazy"><img src="img/w7-07.jpg" alt="" loading="lazy"><img src="img/w7-08.jpg" alt="" loading="lazy"><img src="img/w7-09.jpg" alt="" loading="lazy"><img src="img/w7-10.jpg" alt="" loading="lazy"><img src="img/w7-11.jpg" alt="" loading="lazy"><img src="img/w7-12.jpg" alt="" loading="lazy"><img src="img/w7-13.jpg" alt="" loading="lazy"><img src="img/w7-14.jpg" alt="" loading="lazy"><img src="img/w7-15.jpg" alt="" loading="lazy"><img src="img/w7-16.jpg" alt="" loading="lazy"><img src="img/w7-17.jpg" alt="" loading="lazy"><img src="img/w7-18.jpg" alt="" loading="lazy"><img src="img/w7-19.jpg" alt="" loading="lazy"><img src="img/w7-20.jpg" alt="" loading="lazy"></div>
+        <figcaption><b>Analyse</b> Brüningheide, Fotos vor Ort <span class="scale w7seq-count">01 / 20</span></figcaption></figure>
       </div>
       <div class="quotes">
         <blockquote><p>„Seit fünf Jahren steht da ein Einkaufswagen drin und es parken keine Autos in der Tiefgarage.“</p><cite class="label muted">Interview, 2023</cite></blockquote>
@@ -846,6 +849,21 @@ div.box{cursor:default}
       next.onload=function(){fit(next);next.className='on';imgs[cur].className='';cur=1-cur;peek.href='#'+list[k][1]};
       next.src='img/'+list[n][0]+'.jpg';
     },1800);
+  })();
+  /* Wolke 7: flip through the analysis photos */
+  (function(){
+    var box=document.querySelector('.w7seq-box');if(!box)return;
+    var imgs=box.querySelectorAll('img'),cnt=document.querySelector('.w7seq-count'),i=0,n=imgs.length;
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce)return;
+    imgs.forEach(function(im){im.loading='eager'});
+    setInterval(function(){
+      if(document.hidden||document.getElementById('wolke-7').hidden)return;
+      var next=(i+1)%n;
+      if(!imgs[next].complete)return;
+      imgs[i].className='';imgs[next].className='on';i=next;
+      if(cnt)cnt.textContent=String(i+1).padStart(2,'0')+' / '+n;
+    },450);
   })();
 })();
 </script>
