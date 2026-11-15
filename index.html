@@ -334,6 +334,21 @@ div.box{cursor:default}
 @keyframes skHop{0%,55%,100%{transform:translateY(0) rotate(0)}75%{transform:translateY(-.7%) rotate(-2deg)}}
 @keyframes skWave{0%,40%,100%{transform:rotate(0)}55%{transform:rotate(-12deg)}70%{transform:rotate(4deg)}85%{transform:rotate(-10deg)}}
 @keyframes skSway{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
+.box.sk-stage .skp-out{transform-origin:9.205% 73.194%;animation:skWalk 1.30s ease-in-out infinite;animation-delay:-0.00s}
+.box.sk-stage .skp-og1{transform-origin:19.182% 47.833%;animation:skSway 4.65s ease-in-out infinite;animation-delay:-0.70s}
+.box.sk-stage .skp-sit1{transform-origin:35.0% 73.194%;animation:skLean 6.40s ease-in-out infinite;animation-delay:-1.40s}
+.box.sk-stage .skp-st1{transform-origin:36.159% 73.194%;animation:skSway 4.20s ease-in-out infinite;animation-delay:-2.10s}
+.box.sk-stage .skp-st2{transform-origin:37.023% 73.194%;animation:skSway 4.65s ease-in-out infinite;animation-delay:-2.80s}
+.box.sk-stage .skp-sit2{transform-origin:45.659% 73.194%;animation:skLean 6.40s ease-in-out infinite;animation-delay:-3.50s}
+.box.sk-stage .skp-walk{transform-origin:57.773% 73.194%;animation:skWalk 1.30s ease-in-out infinite;animation-delay:-0.30s}
+.box.sk-stage .skp-desk{transform-origin:74.159% 44.141%;animation:skDesk 5.25s ease-in-out infinite;animation-delay:-4.90s}
+.box.sk-stage .skp-ogp{transform-origin:81.818% 47.833%;animation:skLean 6.40s ease-in-out infinite;animation-delay:-5.60s}
+.box.sk-stage .skp-k1{transform-origin:75.386% 73.194%;animation:skSway 4.20s ease-in-out infinite;animation-delay:-2.10s}
+.box.sk-stage .skp-man{transform-origin:83.386% 73.194%;animation:skSway 4.65s ease-in-out infinite;animation-delay:-2.35s}
+@keyframes skWalk{0%,50%,100%{transform:translateY(0)}25%,75%{transform:translateY(-.35%)}}
+@keyframes skSway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+@keyframes skLean{0%,100%{transform:rotate(0)}50%{transform:rotate(3deg)}}
+@keyframes skDesk{0%,30%,100%{transform:rotate(0)}55%,75%{transform:rotate(5deg)}}
 @media (prefers-reduced-motion: reduce){.box.sk-stage img.sk{animation:none!important}}
 </style>
 </head>
@@ -592,7 +607,7 @@ div.box{cursor:default}
         <figure><div class="box free" data-cap="Grundriss OG · Lerncluster und Freiluftklassenzimmer"><img src="img/s-og.jpg" alt="Grundriss Obergeschoss" loading="lazy"></div><figcaption><b>Grundriss OG</b> Lerncluster, Freiluftklassen</figcaption></figure>
       </div>
       <div class="row">
-        <figure><div class="box free sk-stage" data-cap="Längsschnitt · Lernflur unter dem Bogendach der Markthalle"><img src="img/s-schnitt-base.jpg" alt="Längsschnitt" loading="lazy"><img class="sk sk-plA" src="img/s-schnitt-plA.png" alt="" loading="lazy"><img class="sk sk-plB" src="img/s-schnitt-plB.png" alt="" loading="lazy"><img class="sk sk-kid" src="img/s-schnitt-kid.png" alt="" loading="lazy"><img class="sk sk-wave" src="img/s-schnitt-wave.png" alt="" loading="lazy"></div>
+        <figure><div class="box free sk-stage" data-cap="Längsschnitt · Lernflur unter dem Bogendach der Markthalle"><img src="img/s-schnitt-base.jpg" alt="Längsschnitt" loading="lazy"><img class="sk skp-out" src="img/s-schnitt-p-out.png" alt="" loading="lazy"><img class="sk skp-og1" src="img/s-schnitt-p-og1.png" alt="" loading="lazy"><img class="sk skp-sit1" src="img/s-schnitt-p-sit1.png" alt="" loading="lazy"><img class="sk skp-st1" src="img/s-schnitt-p-st1.png" alt="" loading="lazy"><img class="sk skp-st2" src="img/s-schnitt-p-st2.png" alt="" loading="lazy"><img class="sk skp-sit2" src="img/s-schnitt-p-sit2.png" alt="" loading="lazy"><img class="sk skp-walk" src="img/s-schnitt-p-walk.png" alt="" loading="lazy"><img class="sk skp-desk" src="img/s-schnitt-p-desk.png" alt="" loading="lazy"><img class="sk skp-ogp" src="img/s-schnitt-p-ogp.png" alt="" loading="lazy"><img class="sk skp-k1" src="img/s-schnitt-p-k1.png" alt="" loading="lazy"><img class="sk skp-man" src="img/s-schnitt-p-man.png" alt="" loading="lazy"><img class="sk sk-plA" src="img/s-schnitt-plA.png" alt="" loading="lazy"><img class="sk sk-plB" src="img/s-schnitt-plB.png" alt="" loading="lazy"><img class="sk sk-kid" src="img/s-schnitt-kid.png" alt="" loading="lazy"><img class="sk sk-wave" src="img/s-schnitt-wave.png" alt="" loading="lazy"></div>
           <figcaption><b>Längsschnitt</b> Lernflur unter dem Bogendach der Markthalle</figcaption></figure>
       </div>
       <div class="row split">
